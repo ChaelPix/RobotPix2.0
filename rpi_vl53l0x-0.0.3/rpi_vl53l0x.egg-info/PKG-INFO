@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: rpi-vl53l0x
+Version: 0.0.3
+Summary: Userspace Raspberry Pi VL53l0X library
+Home-page: https://github.com/turmary/VL53L0X_rasp
+Author: Peter Yang <turmary@126.com>
+Author-email: turmary@126.com
+License: MIT
+Description: rpi\_vl53l0x
+        ============
+        
+        Userspace Raspberry Pi library for controlling I2C Time of Flight Distance Sensor -
+        VL53L0X.
+        
+        
+Platform: UNKNOWN
