@@ -1,0 +1,8 @@
+prefix=/home/robot/robotPix/catkin_ws/devel
+
+Name: pixy2_camera
+Description: Description of pixy2_camera
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

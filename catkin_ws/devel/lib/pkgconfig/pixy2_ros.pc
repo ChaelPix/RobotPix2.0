@@ -1,0 +1,8 @@
+prefix=/home/robot/robotPix/catkin_ws/devel
+
+Name: pixy2_ros
+Description: Description of pixy2_ros
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

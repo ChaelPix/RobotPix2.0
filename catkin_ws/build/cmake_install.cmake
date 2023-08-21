@@ -131,6 +131,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/robot/robotPix/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/robot/robotPix/catkin_ws/build/vision_opencv/opencv_tests/cmake_install.cmake")
+  include("/home/robot/robotPix/catkin_ws/build/vision_opencv/vision_opencv/cmake_install.cmake")
+  include("/home/robot/robotPix/catkin_ws/build/vision_opencv/cv_bridge/cmake_install.cmake")
+  include("/home/robot/robotPix/catkin_ws/build/vision_opencv/image_geometry/cmake_install.cmake")
+  include("/home/robot/robotPix/catkin_ws/build/pixy2_camera/cmake_install.cmake")
 
 endif()
 
