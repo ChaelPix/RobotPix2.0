@@ -135,6 +135,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/robot/robotPix/catkin_ws/build/vision_opencv/vision_opencv/cmake_install.cmake")
   include("/home/robot/robotPix/catkin_ws/build/vision_opencv/cv_bridge/cmake_install.cmake")
   include("/home/robot/robotPix/catkin_ws/build/vision_opencv/image_geometry/cmake_install.cmake")
+  include("/home/robot/robotPix/catkin_ws/build/erle_pixy/ros/beginner_camera/cmake_install.cmake")
+  include("/home/robot/robotPix/catkin_ws/build/pixy_codebar_reader/image_converter/cmake_install.cmake")
   include("/home/robot/robotPix/catkin_ws/build/pixy2_camera/cmake_install.cmake")
 
 endif()

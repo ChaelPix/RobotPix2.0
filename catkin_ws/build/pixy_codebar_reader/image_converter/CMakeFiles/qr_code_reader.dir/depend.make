@@ -3,7 +3,7 @@
 
 pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/src/image_converter/qr_code_reader.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy_codebar_reader/image_converter/include/image_converter/qr_code_reader.h
 pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/src/image_converter/qr_code_reader.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy_codebar_reader/image_converter/src/image_converter/qr_code_reader.cpp
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/src/image_converter/qr_code_reader.cpp.o: /opt/ros/noetic/include/cv_bridge/cv_bridge.h
+pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/src/image_converter/qr_code_reader.cpp.o: /home/robot/robotPix/catkin_ws/src/vision_opencv/cv_bridge/include/cv_bridge/cv_bridge.h
 pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/src/image_converter/qr_code_reader.cpp.o: /opt/ros/noetic/include/image_transport/camera_publisher.h
 pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/src/image_converter/qr_code_reader.cpp.o: /opt/ros/noetic/include/image_transport/camera_subscriber.h
 pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/src/image_converter/qr_code_reader.cpp.o: /opt/ros/noetic/include/image_transport/exception.h

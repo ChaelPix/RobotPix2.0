@@ -944,21 +944,8 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_eus
-
-# Build rule for target.
-roscpp_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
@@ -970,8 +957,47 @@ rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_eus
+
+# Build rule for target.
+roscpp_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named pixy_cam
+
+# Build rule for target.
+pixy_cam: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pixy_cam
+.PHONY : pixy_cam
+
+# fast build rule for target.
+pixy_cam/fast:
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/build
+.PHONY : pixy_cam/fast
+
+#=============================================================================
+# Target rules for targets named usb_cam
+
+# Build rule for target.
+usb_cam: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam
+.PHONY : usb_cam
+
+# fast build rule for target.
+usb_cam/fast:
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/build
+.PHONY : usb_cam/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
@@ -983,7 +1009,7 @@ roscpp_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/build
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
@@ -996,7 +1022,7 @@ roscpp_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1009,7 +1035,7 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1022,7 +1048,7 @@ rosgraph_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -1035,7 +1061,7 @@ rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1048,7 +1074,7 @@ roscpp_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1061,8 +1087,47 @@ rosgraph_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named gopro_cam
+
+# Build rule for target.
+gopro_cam: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gopro_cam
+.PHONY : gopro_cam
+
+# fast build rule for target.
+gopro_cam/fast:
+	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/build
+.PHONY : gopro_cam/fast
+
+#=============================================================================
+# Target rules for targets named image_converter_node
+
+# Build rule for target.
+image_converter_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 image_converter_node
+.PHONY : image_converter_node
+
+# fast build rule for target.
+image_converter_node/fast:
+	$(MAKE) -f pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/build.make pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/build
+.PHONY : image_converter_node/fast
+
+#=============================================================================
+# Target rules for targets named qr_code_reader
+
+# Build rule for target.
+qr_code_reader: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 qr_code_reader
+.PHONY : qr_code_reader
+
+# fast build rule for target.
+qr_code_reader/fast:
+	$(MAKE) -f pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/build.make pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/build
+.PHONY : qr_code_reader/fast
 
 #=============================================================================
 # Target rules for targets named pixy2_node
@@ -1150,8 +1215,10 @@ help:
 	@echo "... run_tests_image_geometry_gtest_image_geometry-utest"
 	@echo "... image_geometry-utest-equi"
 	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... pixy_cam"
+	@echo "... usb_cam"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
@@ -1159,6 +1226,9 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... gopro_cam"
+	@echo "... image_converter_node"
+	@echo "... qr_code_reader"
 	@echo "... pixy2_node"
 .PHONY : help
 
