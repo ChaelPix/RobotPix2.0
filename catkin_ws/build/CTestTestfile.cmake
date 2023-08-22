@@ -7,6 +7,7 @@
 subdirs("gtest")
 subdirs("vision_opencv/opencv_tests")
 subdirs("vision_opencv/vision_opencv")
+subdirs("rplidar_control")
 subdirs("vision_opencv/cv_bridge")
 subdirs("vision_opencv/image_geometry")
 subdirs("pixy2_camera")

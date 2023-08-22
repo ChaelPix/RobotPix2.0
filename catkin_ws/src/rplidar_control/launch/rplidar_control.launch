@@ -1,0 +1,8 @@
+<launch>
+
+   <node pkg="rplidar_control" 
+    type="rplidar_control_node" 
+    name="rplidar_control" 
+    output="screen"/>
+
+</launch>
