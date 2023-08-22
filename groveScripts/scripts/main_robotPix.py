@@ -11,6 +11,10 @@ import robotPix_globalVars
 leftButtonPin = 24 #button 0
 rightButtonPin = 26 #button 1
 
+#--Pckgs
+packageNames = ["wall_detector"]
+nodeLaunchNames = ["wall_detector.launch"]
+
 #-------------------
 roscore_process = None
 rosserial_process = None
@@ -58,17 +62,19 @@ def StartRobot():
     print("\n Starting Package")
     setText("Starting Package..")
 
-    command = f"/home/robot/RobotPix/ros_catkin_ws/devel/bin/roslaunch pkg_avancer pkg_avancer.launch"
+    command = f"roslaunch {packageNames[robotPix_globalVars.loadedScript]} {nodeLaunchNames[robotPix_globalVars.loadedScript]}"
     subprocess.Popen(command, shell=True)
 
+    setText("Robot Pix Power!")
     print("\n Package Launched")
-    setText("Moving Forward !")
 
 def StopRobot():
     setText("Robot Stopped !")
     print("\n Roscore Stopped")
     subprocess.run(["rostopic", "pub", "-1", "/stopRos", "std_msgs/Float32", "0"])
     print("\n Stopped PUB")
+    stop_roscore()
+    stop_rosserial()
 
 #----------MAIN--------------------
 def main():
@@ -77,13 +83,13 @@ def main():
     print("\n Booting...")
     robotPix_buttonsHandler.initialize()
 
-    hasRosBoot = False #TO ACTIVATE
-    # while not hasRosBoot:  
-    #     start_ros()
-    #     time.sleep(10)
-    #     hasRosBoot = bool_isRosRunning()
-    #     if(not hasRosBoot):
-    #         setText("Booting Failed.    Retrying...")
+    hasRosBoot = False
+    while not hasRosBoot:  
+        start_ros()
+        time.sleep(10)
+        hasRosBoot = bool_isRosRunning()
+        if(not hasRosBoot):
+            setText("Booting Failed.    Retrying...")
 
         
     robotPix_globalVars.initialize()

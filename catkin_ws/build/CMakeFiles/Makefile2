@@ -58,9 +58,8 @@ all: vision_opencv/opencv_tests/all
 all: vision_opencv/vision_opencv/all
 all: vision_opencv/cv_bridge/all
 all: vision_opencv/image_geometry/all
-all: erle_pixy/ros/beginner_camera/all
-all: pixy_codebar_reader/image_converter/all
 all: pixy2_camera/all
+all: wall_detector/all
 
 .PHONY : all
 
@@ -70,9 +69,8 @@ preinstall: vision_opencv/opencv_tests/preinstall
 preinstall: vision_opencv/vision_opencv/preinstall
 preinstall: vision_opencv/cv_bridge/preinstall
 preinstall: vision_opencv/image_geometry/preinstall
-preinstall: erle_pixy/ros/beginner_camera/preinstall
-preinstall: pixy_codebar_reader/image_converter/preinstall
 preinstall: pixy2_camera/preinstall
+preinstall: wall_detector/preinstall
 
 .PHONY : preinstall
 
@@ -87,43 +85,10 @@ clean: vision_opencv/opencv_tests/clean
 clean: vision_opencv/vision_opencv/clean
 clean: vision_opencv/cv_bridge/clean
 clean: vision_opencv/image_geometry/clean
-clean: erle_pixy/ros/beginner_camera/clean
-clean: pixy_codebar_reader/image_converter/clean
 clean: pixy2_camera/clean
+clean: wall_detector/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory erle_pixy/ros/beginner_camera
-
-# Recursive "all" directory target.
-erle_pixy/ros/beginner_camera/all: erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/all
-erle_pixy/ros/beginner_camera/all: erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/all
-erle_pixy/ros/beginner_camera/all: erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/all
-
-.PHONY : erle_pixy/ros/beginner_camera/all
-
-# Recursive "preinstall" directory target.
-erle_pixy/ros/beginner_camera/preinstall:
-
-.PHONY : erle_pixy/ros/beginner_camera/preinstall
-
-# Recursive "clean" directory target.
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-erle_pixy/ros/beginner_camera/clean: erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/clean
-
-.PHONY : erle_pixy/ros/beginner_camera/clean
 
 #=============================================================================
 # Directory level rules for directory gtest
@@ -196,29 +161,19 @@ pixy2_camera/preinstall:
 .PHONY : pixy2_camera/preinstall
 
 # Recursive "clean" directory target.
+pixy2_camera/clean: pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+pixy2_camera/clean: pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+pixy2_camera/clean: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+pixy2_camera/clean: pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/clean
+pixy2_camera/clean: pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+pixy2_camera/clean: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+pixy2_camera/clean: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+pixy2_camera/clean: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+pixy2_camera/clean: pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+pixy2_camera/clean: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 pixy2_camera/clean: pixy2_camera/CMakeFiles/pixy2_node.dir/clean
 
 .PHONY : pixy2_camera/clean
-
-#=============================================================================
-# Directory level rules for directory pixy_codebar_reader/image_converter
-
-# Recursive "all" directory target.
-pixy_codebar_reader/image_converter/all: pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/all
-pixy_codebar_reader/image_converter/all: pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all
-
-.PHONY : pixy_codebar_reader/image_converter/all
-
-# Recursive "preinstall" directory target.
-pixy_codebar_reader/image_converter/preinstall:
-
-.PHONY : pixy_codebar_reader/image_converter/preinstall
-
-# Recursive "clean" directory target.
-pixy_codebar_reader/image_converter/clean: pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/clean
-pixy_codebar_reader/image_converter/clean: pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/clean
-
-.PHONY : pixy_codebar_reader/image_converter/clean
 
 #=============================================================================
 # Directory level rules for directory vision_opencv/cv_bridge
@@ -417,6 +372,24 @@ vision_opencv/vision_opencv/preinstall:
 vision_opencv/vision_opencv/clean:
 
 .PHONY : vision_opencv/vision_opencv/clean
+
+#=============================================================================
+# Directory level rules for directory wall_detector
+
+# Recursive "all" directory target.
+wall_detector/all: wall_detector/CMakeFiles/wall_detector_node.dir/all
+
+.PHONY : wall_detector/all
+
+# Recursive "preinstall" directory target.
+wall_detector/preinstall:
+
+.PHONY : wall_detector/preinstall
+
+# Recursive "clean" directory target.
+wall_detector/clean: wall_detector/CMakeFiles/wall_detector_node.dir/clean
+
+.PHONY : wall_detector/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -618,7 +591,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=21,22 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=19,20 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -645,7 +618,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=19,20 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=17,18 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1630,7 +1603,7 @@ vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: vision_opencv/cv
 vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: vision_opencv/cv_bridge/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/build.make vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/depend
 	$(MAKE) -f vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/build.make vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=25,26,27 "Built target image_geometry"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=21,22,23 "Built target image_geometry"
 .PHONY : vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1908,7 +1881,7 @@ vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/all: gtest
 vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/all: vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all
 	$(MAKE) -f vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/build.make vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/depend
 	$(MAKE) -f vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/build.make vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=28,29 "Built target image_geometry-utest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=24,25 "Built target image_geometry-utest"
 .PHONY : vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2046,7 +2019,7 @@ vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/all: 
 vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/all: vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all
 	$(MAKE) -f vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/build.make vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/depend
 	$(MAKE) -f vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/build.make vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=30,31 "Built target image_geometry-utest-equi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=26,27 "Built target image_geometry-utest-equi"
 .PHONY : vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2067,434 +2040,274 @@ vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/clean
 .PHONY : vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/clean
 
 #=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir
+# Target rules for target pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir
 
 # All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
+pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_cpp: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+roscpp_generate_messages_cpp: pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 .PHONY : roscpp_generate_messages_cpp
 
 # clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
+# Target rules for target pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir
 
 # All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir
-
-# All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build
+pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/all:
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/depend
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/all
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
+pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_eus: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+roscpp_generate_messages_eus: pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 .PHONY : roscpp_generate_messages_eus
 
 # clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir
+# Target rules for target pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=38,39,40,41,42,43,44 "Built target pixy_cam"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/all
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/all
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-pixy_cam: erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/rule
+rosgraph_msgs_generate_messages_nodejs: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : pixy_cam
-
-# clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/pixy_cam.dir/clean
-
-#=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir
-
-# All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=47,48 "Built target usb_cam"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/all
-
-# Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/rule
-
-# Convenience name for target.
-usb_cam: erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/rule
-
-.PHONY : usb_cam
+.PHONY : rosgraph_msgs_generate_messages_nodejs
 
 # clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/usb_cam.dir/clean
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir
+# Target rules for target pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir
 
 # All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/build
+pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/all:
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/depend
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/all
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
+pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_py: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/rule
+roscpp_generate_messages_py: pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 .PHONY : roscpp_generate_messages_py
 
 # clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/clean
+pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/clean:
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir
+# Target rules for target pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir
 
 # All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
+pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_nodejs: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+roscpp_generate_messages_nodejs: pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 .PHONY : roscpp_generate_messages_nodejs
 
 # clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+# Target rules for target pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+rosgraph_msgs_generate_messages_cpp: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_cpp
 
 # clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+# Target rules for target pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_eus: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+rosgraph_msgs_generate_messages_eus: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_eus
 
 # clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+# Target rules for target pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+rosgraph_msgs_generate_messages_lisp: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_lisp
 
 # clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir
+# Target rules for target pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir
 
 # All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_lisp: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+roscpp_generate_messages_lisp: pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 .PHONY : roscpp_generate_messages_lisp
 
 # clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) -f pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+# Target rules for target pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_py: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+rosgraph_msgs_generate_messages_py: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_py
 
 # clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir
-
-# All Build rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/all:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/depend
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=17,18 "Built target gopro_cam"
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/all
-
-# Build rule for subdir invocation for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/rule
-
-# Convenience name for target.
-gopro_cam: erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/rule
-
-.PHONY : gopro_cam
-
-# clean rule for target.
-erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/clean:
-	$(MAKE) -f erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/build.make erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/clean
-.PHONY : erle_pixy/ros/beginner_camera/CMakeFiles/gopro_cam.dir/clean
-
-#=============================================================================
-# Target rules for target pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir
-
-# All Build rule for target.
-pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/all: vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/all: pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all
-	$(MAKE) -f pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/build.make pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/depend
-	$(MAKE) -f pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/build.make pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=23,24 "Built target image_converter_node"
-.PHONY : pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/all
-
-# Build rule for subdir invocation for target.
-pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/rule
-
-# Convenience name for target.
-image_converter_node: pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/rule
-
-.PHONY : image_converter_node
-
-# clean rule for target.
-pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/clean:
-	$(MAKE) -f pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/build.make pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/clean
-.PHONY : pixy_codebar_reader/image_converter/CMakeFiles/image_converter_node.dir/clean
-
-#=============================================================================
-# Target rules for target pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir
-
-# All Build rule for target.
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/std_msgs_generate_messages_py.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: vision_opencv/cv_bridge/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_eus.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_py.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: erle_pixy/ros/beginner_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all: erle_pixy/ros/beginner_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(MAKE) -f pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/build.make pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/depend
-	$(MAKE) -f pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/build.make pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=45,46 "Built target qr_code_reader"
-.PHONY : pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all
-
-# Build rule for subdir invocation for target.
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/rule
-
-# Convenience name for target.
-qr_code_reader: pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/rule
-
-.PHONY : qr_code_reader
-
-# clean rule for target.
-pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/clean:
-	$(MAKE) -f pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/build.make pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/clean
-.PHONY : pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/clean
+pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
 # Target rules for target pixy2_camera/CMakeFiles/pixy2_node.dir
@@ -2503,7 +2316,7 @@ pixy_codebar_reader/image_converter/CMakeFiles/qr_code_reader.dir/clean:
 pixy2_camera/CMakeFiles/pixy2_node.dir/all: vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all
 	$(MAKE) -f pixy2_camera/CMakeFiles/pixy2_node.dir/build.make pixy2_camera/CMakeFiles/pixy2_node.dir/depend
 	$(MAKE) -f pixy2_camera/CMakeFiles/pixy2_node.dir/build.make pixy2_camera/CMakeFiles/pixy2_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=32,33,34,35,36,37 "Built target pixy2_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=28,29,30,31,32,33 "Built target pixy2_node"
 .PHONY : pixy2_camera/CMakeFiles/pixy2_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2522,6 +2335,57 @@ pixy2_node: pixy2_camera/CMakeFiles/pixy2_node.dir/rule
 pixy2_camera/CMakeFiles/pixy2_node.dir/clean:
 	$(MAKE) -f pixy2_camera/CMakeFiles/pixy2_node.dir/build.make pixy2_camera/CMakeFiles/pixy2_node.dir/clean
 .PHONY : pixy2_camera/CMakeFiles/pixy2_node.dir/clean
+
+#=============================================================================
+# Target rules for target wall_detector/CMakeFiles/wall_detector_node.dir
+
+# All Build rule for target.
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/std_msgs_generate_messages_py.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: pixy2_camera/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: pixy2_camera/CMakeFiles/roscpp_generate_messages_eus.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: pixy2_camera/CMakeFiles/roscpp_generate_messages_py.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: pixy2_camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: pixy2_camera/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: pixy2_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_node.dir/build.make wall_detector/CMakeFiles/wall_detector_node.dir/depend
+	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_node.dir/build.make wall_detector/CMakeFiles/wall_detector_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=34,35 "Built target wall_detector_node"
+.PHONY : wall_detector/CMakeFiles/wall_detector_node.dir/all
+
+# Build rule for subdir invocation for target.
+wall_detector/CMakeFiles/wall_detector_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 wall_detector/CMakeFiles/wall_detector_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+.PHONY : wall_detector/CMakeFiles/wall_detector_node.dir/rule
+
+# Convenience name for target.
+wall_detector_node: wall_detector/CMakeFiles/wall_detector_node.dir/rule
+
+.PHONY : wall_detector_node
+
+# clean rule for target.
+wall_detector/CMakeFiles/wall_detector_node.dir/clean:
+	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_node.dir/build.make wall_detector/CMakeFiles/wall_detector_node.dir/clean
+.PHONY : wall_detector/CMakeFiles/wall_detector_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,0 +1,8 @@
+prefix=/home/robot/robotPix/catkin_ws/install
+
+Name: wall_detector
+Description: Description of wall_detector
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lwall_detector
+Requires: roscpp sensor_msgs std_msgs

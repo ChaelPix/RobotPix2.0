@@ -14,7 +14,7 @@ LeftButtonHeld = 1
 RightButtonClicked = 2
 RightButtonHeld = 3
 #------------------
-packagesDisplayNames = ["Avancer", "Reculer"]
+packagesDisplayNames = ["Detection Mur", ""]
 settingsDisplayNames = ["Choix du Package", "Desactiver Robot", "Eteindre Raspi"]
 #------------------
 rightBtn = None
@@ -48,7 +48,10 @@ def buttonAction(action, buttonPin):
              PackageSelector(-1)
         elif(buttonInput == RightButtonClicked):
              PackageSelector(1)
-        elif(buttonInput == RightButtonHeld):
+        elif(buttonInput == LeftButtonHeld): #Start
+             ChangeRobotState(5)
+             AskToStart()
+        elif(buttonInput == RightButtonHeld): 
              ChangeRobotState(2)
              SettingsSelector(0)
 
@@ -74,8 +77,24 @@ def buttonAction(action, buttonPin):
         if(buttonInput == LeftButtonClicked):
              StopPi()
         elif(buttonInput == RightButtonClicked):
+             ChangeRobotState(1)
+             SettingsSelector(0)
+
+    #Asking to Start
+    elif(robotState == 5):
+        if(buttonInput == LeftButtonClicked):
+             ChangeRobotState(6)
+             StartRobot()
+        elif(buttonInput == RightButtonClicked):
              ChangeRobotState(2)
              SettingsSelector(0)
+
+    #Running, Force Stop
+    elif(robotState == 6):
+        if(buttonInput == RightButtonClicked):
+             ChangeRobotState(1)
+             StopRobot()
+             
              
 def ChangeRobotState(newState):
      robotPix_globalVars.robotState = newState
@@ -90,7 +109,7 @@ def PackageSelector(x):
 
     robotPix_globalVars.loadedScript = id
     setText("#" + str(id+1) 
-            + ": " +  packagesDisplayNames[id]
+            + ":" +  packagesDisplayNames[id]
             +"\n<-|Strt  Opts|->")
     
 #---Robot State = 2 ------
@@ -105,6 +124,8 @@ def SettingsSelector(x):
     setText(settingsDisplayNames[selectedSetting]
             +"\n<-|Choose     ->")
     
+
+#---------------------------------
 def SettingsAction():
     global selectedSetting
     if(selectedSetting == 0):
@@ -131,6 +152,21 @@ def StopPi():
     setText("----------------Raspi Desactivee")
     subprocess.run(["sudo", "poweroff"])
 
+#---------------------------------
+
+def AskToStart():
+    setText("Demarrer Robot ?" + "\nOui          Non")
+
+def StartRobot():
+    global rightBtn
+    rightBtn.led.light(True)
+    main_robotPix.StartRobot()
+
+def StopRobot():
+    setText("Arret D'urgence!")
+    main_robotPix.StopRobot()
+    global rightBtn
+    rightBtn.led.light(False)
 
 #Main
 def initialize():
@@ -138,5 +174,8 @@ def initialize():
     rightBtn = GroveLedButton(main_robotPix.rightButtonPin, buttonAction)
     leftBtn = GroveLedButton(main_robotPix.leftButtonPin, buttonAction)
 
-    #global rightBtn
-    #rightBtn.led.light(True)
+    rightBtn.led.light(False)
+    leftBtn.led.light(False)
+
+#global rightBtn
+#rightBtn.led.light(True)

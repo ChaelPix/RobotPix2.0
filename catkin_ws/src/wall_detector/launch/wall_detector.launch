@@ -1,0 +1,18 @@
+<launch>
+
+    <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+
+   <node pkg="wall_detector" 
+    type="wall_detector_node" 
+    name="wall_detector" 
+    output="screen"/>
+
+
+<!-- 
+    <node pkg="pkg_name" 
+    type="script_name" 
+    name="node_name" 
+    output="screen"/> 
+-->
+
+</launch>
