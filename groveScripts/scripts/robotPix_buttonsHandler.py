@@ -1,6 +1,8 @@
 from grove_rgb_lcd import *
 import main_robotPix
 import robotPix_globalVars
+import robotPix_lidarControl
+
 import subprocess
 from grove_LedButton import GroveLedButton 
 
@@ -92,8 +94,14 @@ def buttonAction(action, buttonPin):
     #Running, Force Stop
     elif(robotState == 6):
         if(buttonInput == RightButtonClicked):
-             ChangeRobotState(1)
+             ChangeRobotState(7)
              StopRobot()
+
+    #Stopped, reboot
+        elif(robotState == 7):
+            if(buttonInput == LeftButtonClicked):
+                main_robotPix.RestartRobotAferStop()
+            
              
              
 def ChangeRobotState(newState):
@@ -142,6 +150,8 @@ def AskToStopCode():
 
 def StopCode():
     setText("----------------Robot Desactive")
+    robotPix_lidarControl.disable_device()
+    main_robotPix.stop_roscore()
     robotPix_globalVars.scriptRunning = False
 
 def AskToStopRapi():
