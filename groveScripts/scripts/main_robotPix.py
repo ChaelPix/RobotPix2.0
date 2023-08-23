@@ -6,7 +6,6 @@ import time
 
 import robotPix_buttonsHandler
 import robotPix_globalVars
-import robotPix_lidarControl
 
 #----Settings-------
 leftButtonPin = 24 #button 0
@@ -15,7 +14,7 @@ rightButtonPin = 26 #button 1
 #--Pckgs
 packageNames = ["wall_detector"]
 nodeLaunchNames = ["wall_detector.launch"]
-hasPackageLidar =  [1]
+hasPackageLidar = [1]
 #-------------------
 roscore_process = None
 rosserial_process = None
@@ -29,26 +28,29 @@ def start_roscore():
 
 def start_rosserial():
     global rosserial_process
-    rosserial_process = subprocess.Popen(["rosrun", "rosserial_python", "serial_node.py", "/dev/ttyUSB0"])
+    rosserial_process = subprocess.Popen(["rosrun", "rosserial_python", "serial_node.py", "/dev/ttyMegaPi"])
+
 
 def start_ros():
     setText("    Starting\n   Roscore...")
     print("\n Start Roscore")
     start_roscore()
-    
+
     setText("    Starting\n  Rosserial...")
     print("\n Start Rosserial")
     start_rosserial()
+
 
 def bool_isRosRunning():
     return (roscore_process.poll() is None) and (rosserial_process.poll() is None)
 
 def stop_roscore():
-    global roscore_process
-    if roscore_process is not None:
-        roscore_process.terminate()
-        roscore_process.wait() 
-        roscore_process = None
+    subprocess.run(["killall", "-9", "rosmaster"], check=True)
+    # global roscore_process
+    # if roscore_process is not None:
+    #     roscore_process.terminate()
+    #     roscore_process.wait() 
+    #     roscore_process = None
 
 def stop_rosserial():
     global rosserial_process
@@ -60,12 +62,6 @@ def stop_rosserial():
 
 #--------Launch Control-------------
 def StartRobot():
-
-    if(hasPackageLidar[robotPix_globalVars.loadedScript] == 1):
-        print("\n Starting Lidar")
-        setText("Starting Lidar..")
-        robotPix_lidarControl.enable_device()
-
     print("\n Starting Package")
     setText("Starting Package..")
     
@@ -78,9 +74,6 @@ def StartRobot():
 def StopRobot():
     setText("ARRET D'URGENCE!")
 
-    if(hasPackageLidar[robotPix_globalVars.loadedScript] == 1):
-        robotPix_lidarControl.disable_device()
-
     subprocess.run(["rostopic", "pub", "-1", "/stopRos", "std_msgs/Float32", "0"])
     print("\n /stopRos published")
     time.sleep(0.7)
@@ -88,28 +81,25 @@ def StopRobot():
     subprocess.run(["rosnode", "kill", "-a"])
     print("\n Ros nodes killed")
 
-    stop_roscore()
-    print("\n Roscore Killed")
+    # stop_roscore()
+    # print("\n Roscore Killed")
     
 
 def RestartRobotAferStop():
-    hasRosBoot = False
-    while not hasRosBoot:  
-        start_ros()
-        time.sleep(10)
-        hasRosBoot = bool_isRosRunning()
-        if(not hasRosBoot):
-            setText("Booting Failed.    Retrying...")
+    setText("   Booting...")
+    print("\n Booting...")
+    start_rosserial()
+    time.sleep(5)
     robotPix_globalVars.robotState = 2
     robotPix_buttonsHandler.SettingsSelector(0)
     print("Roscore and Rosserial are ready.")
 
 #----------MAIN--------------------
 def main():
+    robotPix_buttonsHandler.initialize()
+
     setText("   Booting...")
     print("\n Booting...")
-    robotPix_lidarControl.initialize()
-    robotPix_buttonsHandler.initialize()
 
     hasRosBoot = False
     while not hasRosBoot:  
