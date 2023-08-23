@@ -56,6 +56,7 @@ CMAKE_BINARY_DIR = /home/robot/robotPix/catkin_ws/build
 all: gtest/all
 all: vision_opencv/opencv_tests/all
 all: vision_opencv/vision_opencv/all
+all: dashboard/all
 all: rplidar_control/all
 all: vision_opencv/cv_bridge/all
 all: vision_opencv/image_geometry/all
@@ -68,6 +69,7 @@ all: wall_detector/all
 preinstall: gtest/preinstall
 preinstall: vision_opencv/opencv_tests/preinstall
 preinstall: vision_opencv/vision_opencv/preinstall
+preinstall: dashboard/preinstall
 preinstall: rplidar_control/preinstall
 preinstall: vision_opencv/cv_bridge/preinstall
 preinstall: vision_opencv/image_geometry/preinstall
@@ -85,6 +87,7 @@ clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: vision_opencv/opencv_tests/clean
 clean: vision_opencv/vision_opencv/clean
+clean: dashboard/clean
 clean: rplidar_control/clean
 clean: vision_opencv/cv_bridge/clean
 clean: vision_opencv/image_geometry/clean
@@ -92,6 +95,28 @@ clean: pixy2_camera/clean
 clean: wall_detector/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory dashboard
+
+# Recursive "all" directory target.
+dashboard/all:
+
+.PHONY : dashboard/all
+
+# Recursive "preinstall" directory target.
+dashboard/preinstall:
+
+.PHONY : dashboard/preinstall
+
+# Recursive "clean" directory target.
+dashboard/clean: dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+dashboard/clean: dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+dashboard/clean: dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+dashboard/clean: dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+dashboard/clean: dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+.PHONY : dashboard/clean
 
 #=============================================================================
 # Directory level rules for directory gtest
@@ -184,21 +209,16 @@ rplidar_control/preinstall:
 # Recursive "clean" directory target.
 rplidar_control/clean: rplidar_control/CMakeFiles/std_srvs_generate_messages_py.dir/clean
 rplidar_control/clean: rplidar_control/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
-rplidar_control/clean: rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
-rplidar_control/clean: rplidar_control/CMakeFiles/rplidar_control_node.dir/clean
-rplidar_control/clean: rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
-rplidar_control/clean: rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-rplidar_control/clean: rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-rplidar_control/clean: rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
-rplidar_control/clean: rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 rplidar_control/clean: rplidar_control/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 rplidar_control/clean: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-rplidar_control/clean: rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+rplidar_control/clean: rplidar_control/CMakeFiles/rplidar_control_node.dir/clean
+rplidar_control/clean: rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
 rplidar_control/clean: rplidar_control/CMakeFiles/roscpp_generate_messages_py.dir/clean
-rplidar_control/clean: rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+rplidar_control/clean: rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
 rplidar_control/clean: rplidar_control/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 rplidar_control/clean: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-rplidar_control/clean: rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+rplidar_control/clean: rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+rplidar_control/clean: rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
 rplidar_control/clean: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 rplidar_control/clean: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 rplidar_control/clean: rplidar_control/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
@@ -692,6 +712,141 @@ vision_opencv/opencv_tests/CMakeFiles/_catkin_empty_exported_target.dir/clean:
 .PHONY : vision_opencv/opencv_tests/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
+# Target rules for target dashboard/CMakeFiles/std_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+.PHONY : std_msgs_generate_messages_py
+
+# clean rule for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# clean rule for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# clean rule for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+.PHONY : std_msgs_generate_messages_eus
+
+# clean rule for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# clean rule for target.
+dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+.PHONY : dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
 # Target rules for target rplidar_control/CMakeFiles/std_srvs_generate_messages_py.dir
 
 # All Build rule for target.
@@ -744,214 +899,6 @@ std_srvs_generate_messages_nodejs: rplidar_control/CMakeFiles/std_srvs_generate_
 rplidar_control/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean:
 	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
 .PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir
-
-# All Build rule for target.
-rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/all:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/depend
-	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_lisp"
-.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_lisp: rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-.PHONY : std_srvs_generate_messages_lisp
-
-# clean rule for target.
-rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
-.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target rplidar_control/CMakeFiles/rplidar_control_node.dir
-
-# All Build rule for target.
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_py.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_eus.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_py.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(MAKE) -f rplidar_control/CMakeFiles/rplidar_control_node.dir/build.make rplidar_control/CMakeFiles/rplidar_control_node.dir/depend
-	$(MAKE) -f rplidar_control/CMakeFiles/rplidar_control_node.dir/build.make rplidar_control/CMakeFiles/rplidar_control_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=34,35 "Built target rplidar_control_node"
-.PHONY : rplidar_control/CMakeFiles/rplidar_control_node.dir/all
-
-# Build rule for subdir invocation for target.
-rplidar_control/CMakeFiles/rplidar_control_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/rplidar_control_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : rplidar_control/CMakeFiles/rplidar_control_node.dir/rule
-
-# Convenience name for target.
-rplidar_control_node: rplidar_control/CMakeFiles/rplidar_control_node.dir/rule
-
-.PHONY : rplidar_control_node
-
-# clean rule for target.
-rplidar_control/CMakeFiles/rplidar_control_node.dir/clean:
-	$(MAKE) -f rplidar_control/CMakeFiles/rplidar_control_node.dir/build.make rplidar_control/CMakeFiles/rplidar_control_node.dir/clean
-.PHONY : rplidar_control/CMakeFiles/rplidar_control_node.dir/clean
-
-#=============================================================================
-# Target rules for target rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir
-
-# All Build rule for target.
-rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/all:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/depend
-	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_eus"
-.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_eus: rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-
-.PHONY : std_srvs_generate_messages_eus
-
-# clean rule for target.
-rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/clean:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
-.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# clean rule for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# clean rule for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir
-
-# All Build rule for target.
-rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/all:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/depend
-	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_cpp"
-.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_cpp: rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-.PHONY : std_srvs_generate_messages_cpp
-
-# clean rule for target.
-rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
-.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir
-
-# All Build rule for target.
-rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
-	$(MAKE) -f rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
-	$(MAKE) -f rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
-.PHONY : rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# clean rule for target.
-rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	$(MAKE) -f rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-.PHONY : rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Target rules for target rplidar_control/CMakeFiles/roscpp_generate_messages_eus.dir
@@ -1008,31 +955,77 @@ rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
 .PHONY : rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir
+# Target rules for target rplidar_control/CMakeFiles/rplidar_control_node.dir
 
 # All Build rule for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_py.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_eus.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_py.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(MAKE) -f rplidar_control/CMakeFiles/rplidar_control_node.dir/build.make rplidar_control/CMakeFiles/rplidar_control_node.dir/depend
+	$(MAKE) -f rplidar_control/CMakeFiles/rplidar_control_node.dir/build.make rplidar_control/CMakeFiles/rplidar_control_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=34,35 "Built target rplidar_control_node"
+.PHONY : rplidar_control/CMakeFiles/rplidar_control_node.dir/all
 
 # Build rule for subdir invocation for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+rplidar_control/CMakeFiles/rplidar_control_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/rplidar_control_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : rplidar_control/CMakeFiles/rplidar_control_node.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_lisp: rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+rplidar_control_node: rplidar_control/CMakeFiles/rplidar_control_node.dir/rule
 
-.PHONY : std_msgs_generate_messages_lisp
+.PHONY : rplidar_control_node
 
 # clean rule for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+rplidar_control/CMakeFiles/rplidar_control_node.dir/clean:
+	$(MAKE) -f rplidar_control/CMakeFiles/rplidar_control_node.dir/build.make rplidar_control/CMakeFiles/rplidar_control_node.dir/clean
+.PHONY : rplidar_control/CMakeFiles/rplidar_control_node.dir/clean
+
+#=============================================================================
+# Target rules for target rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir
+
+# All Build rule for target.
+rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/all:
+	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/depend
+	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_eus"
+.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_eus: rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+.PHONY : std_srvs_generate_messages_eus
+
+# clean rule for target.
+rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/clean:
+	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
 
 #=============================================================================
 # Target rules for target rplidar_control/CMakeFiles/roscpp_generate_messages_py.dir
@@ -1062,31 +1055,31 @@ rplidar_control/CMakeFiles/roscpp_generate_messages_py.dir/clean:
 .PHONY : rplidar_control/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir
+# Target rules for target rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir
 
 # All Build rule for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/all:
+	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/depend
+	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_lisp"
+.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_eus: rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+std_srvs_generate_messages_lisp: rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
-.PHONY : std_msgs_generate_messages_eus
+.PHONY : std_srvs_generate_messages_lisp
 
 # clean rule for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
 
 #=============================================================================
 # Target rules for target rplidar_control/CMakeFiles/roscpp_generate_messages_nodejs.dir
@@ -1143,31 +1136,58 @@ rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
 .PHONY : rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir
+# Target rules for target rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir
 
 # All Build rule for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) -f rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) -f rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
+.PHONY : rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_cpp: rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+roscpp_generate_messages_cpp: rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
-.PHONY : std_msgs_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
 
 # clean rule for target.
-rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-.PHONY : rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) -f rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir
+
+# All Build rule for target.
+rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/all:
+	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/depend
+	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_cpp"
+.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_cpp: rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+.PHONY : std_srvs_generate_messages_cpp
+
+# clean rule for target.
+rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+.PHONY : rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Target rules for target rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
@@ -1578,11 +1598,11 @@ vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/clean:
 # Target rules for target vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir
 
 # All Build rule for target.
-vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/all
-vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/all
+vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
@@ -2063,11 +2083,11 @@ vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_conversion
 # Target rules for target vision_opencv/image_geometry/CMakeFiles/image_geometry.dir
 
 # All Build rule for target.
-vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/all
-vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/all
+vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: vision_opencv/cv_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
@@ -2547,17 +2567,17 @@ pixy2_camera/CMakeFiles/pixy2_node.dir/clean:
 # Target rules for target wall_detector/CMakeFiles/wall_detector_node.dir
 
 # All Build rule for target.
-wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_py.dir/all
-wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_eus.dir/all
 wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_py.dir/all
-wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 wall_detector/CMakeFiles/wall_detector_node.dir/all: rplidar_control/CMakeFiles/roscpp_generate_messages_lisp.dir/all
