@@ -1,0 +1,22 @@
+<launch>
+    <node name="rplidarNode"          
+    pkg="rplidar_ros" 
+    type="rplidarNode" 
+    output="screen"/>
+
+    <node name="slam_gmapping"       
+    pkg="gmapping"    
+    type="slam_gmapping" 
+    output="screen"/>
+
+    <node name="mapping"
+    pkg="mapping" 
+    type="mapping_node" 
+    output="screen"/>
+    
+    <node name="map_monitor" 
+    pkg="mapping" 
+    type="map_monitor" 
+    output="screen"/>
+
+</launch>

@@ -1,2 +1,2 @@
-dashboard:pixy2_camera:rplidar_control:vision_opencv/cv_bridge:vision_opencv/image_geometry:vision_opencv/opencv_tests:vision_opencv/vision_opencv:wall_detector
+dashboard:mapping:pixy2_camera:rplidar_control:vision_opencv/cv_bridge:vision_opencv/image_geometry:vision_opencv/opencv_tests:vision_opencv/vision_opencv:wall_detector
 -DCATKIN_DEVEL_PREFIX=/home/robot/robotPix/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/robot/robotPix/catkin_ws/install -G Unix Makefiles

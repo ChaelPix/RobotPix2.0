@@ -15,7 +15,7 @@ LeftButtonHeld = 1
 RightButtonClicked = 2
 RightButtonHeld = 3
 #------------------
-packagesDisplayNames = ["Detection Mur", ""]
+packagesDisplayNames = ["Detection Mur", "Mapping Tableau"]
 settingsDisplayNames = ["Choix du Package", "Desactiver Robot", "Eteindre Raspi"]
 #------------------
 rightBtn = None
