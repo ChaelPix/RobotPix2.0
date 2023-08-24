@@ -23,18 +23,19 @@ leftBtn = None
 selectedSetting = 0
 
 def getButtonInput(action, buttonPin):
+    print("action : " + str(action) + " button : " + str(buttonPin))
     buttonId = LeftButton if buttonPin == main_robotPix.leftButtonPin else RightButton
 
     if(buttonId == LeftButton):
-            if(action == Click):
-                return LeftButtonClicked
-            elif(action == Hold):
-                return LeftButtonHeld
+        if(action == Click):
+            return LeftButtonClicked
+        elif(action == Hold):
+            return LeftButtonHeld
     elif(buttonId == RightButton):
-            if(action == Click):
-                return RightButtonClicked
-            elif(action == Hold):
-                return RightButtonHeld
+        if(action == Click):
+            return RightButtonClicked
+        elif(action == Hold):
+            return RightButtonHeld
 
 
 
@@ -166,11 +167,14 @@ def AskToStopRapi():
 
 def StopPi():
     setText("----------------Raspi Desactivee")
-    subprocess.run(["sudo", "poweroff"])
+    #subprocess.run(["sudo", "-S", "poweroff"])
+    subprocess.run(["systemctl", "start", "poweroff_nopass.service"])
 
 #---------------------------------
 
 def AskToStart():
+    global leftBtn
+    leftBtn.led.light(False)
     setText("Demarrer Robot ?" + "\nOui          Non")
 
 def StartRobot():
@@ -179,13 +183,13 @@ def StartRobot():
     main_robotPix.StartRobot()
 
 def StopRobot():
-    setText("Arret D'urgence!")
+    setText("Arret!")
     main_robotPix.StopRobot()
     global rightBtn
     rightBtn.led.light(False)
     time.sleep(2)
     global leftBtn
-    setText("Arret D'urgence.<-On  Off/Stp|->")
+    setText("Robot Arrete... <-On  Off/Stp|->")
     leftBtn.led.light(True)
     ChangeRobotState(7)
 

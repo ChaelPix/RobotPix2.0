@@ -98,12 +98,7 @@ def StopRobot():
     # print("\n Roscore Killed")
     
 def shutdown_roscore():
-    try:
-        rospy.wait_for_service('/shutdown', timeout=5)
-        shutdown_service = rospy.ServiceProxy('/shutdown', Empty)
-        shutdown_service()
-    except (rospy.ServiceException, rospy.ROSException) as e:
-        rospy.logerr("Failed to shutdown roscore: %s", e)
+    os.system("pkill -f roscore")
 
 
 def RestartRobotAferStop():
