@@ -167,8 +167,8 @@ def AskToStopRapi():
 
 def StopPi():
     setText("----------------Raspi Desactivee")
-    #subprocess.run(["sudo", "-S", "poweroff"])
-    subprocess.run(["systemctl", "start", "poweroff_nopass.service"])
+    subprocess.Popen(['sudo','poweroff'])
+    #subprocess.run(["systemctl", "start", "poweroff_nopass.service"])
 
 #---------------------------------
 
