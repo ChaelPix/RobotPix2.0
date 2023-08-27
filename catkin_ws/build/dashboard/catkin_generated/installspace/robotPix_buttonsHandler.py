@@ -15,7 +15,7 @@ LeftButtonHeld = 1
 RightButtonClicked = 2
 RightButtonHeld = 3
 #------------------
-packagesDisplayNames = ["Detection Mur", "Mapping Tableau"]
+packagesDisplayNames = ["Detection Mur", "Mapping"]
 settingsDisplayNames = ["Choix du Package", "Desactiver Robot", "Eteindre Raspi"]
 #------------------
 rightBtn = None
@@ -88,8 +88,8 @@ def buttonAction(action, buttonPin):
     #Asking to Start
     elif(robotState == 5):
         if(buttonInput == LeftButtonClicked):
-             ChangeRobotState(6)
              StartRobot()
+             ChangeRobotState(6)
         elif(buttonInput == RightButtonClicked):
              ChangeRobotState(2)
              SettingsSelector(0)

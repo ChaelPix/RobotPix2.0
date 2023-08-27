@@ -3,6 +3,6 @@ prefix=/home/robot/robotPix/catkin_ws/devel
 Name: mapping
 Description: Description of mapping
 Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
+Cflags: -I/home/robot/robotPix/catkin_ws/src/mapping/include
+Libs: -L${prefix}/lib -lmapping
+Requires: roscpp std_srvs std_msgs

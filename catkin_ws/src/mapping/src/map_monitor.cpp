@@ -23,8 +23,8 @@ public:
 
         // Si la taille de la carte n'a pas changé pendant 10 cycles consécutifs, sauvegardez la carte
         if (unchanged_counter_ >= 10) {
-            saveMap();
-            ros::shutdown();
+            //saveMap();
+            //ros::shutdown();
         }
     }
 
