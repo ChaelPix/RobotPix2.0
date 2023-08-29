@@ -33,6 +33,7 @@
 <launch>
   <node pkg="tf" type="static_transform_publisher" name="map_nav_broadcaster" args="0 0 0 0 0 0 map nav 100"/>
   <node pkg="tf" type="static_transform_publisher" name="base_link_to_lasers" args="0 0 0 0 0 0 base_link lasers 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="map_to_base_link_broadcaster" args="0 0 0 0 0 0 map base_link 100"/>
 
   <arg name="tf_map_scanmatch_transform_frame_name" default="scanmatcher_frame"/>
   <arg name="base_frame" default="base_link"/>
@@ -77,4 +78,24 @@
     <param name="tf_map_scanmatch_transform_frame_name" value="$(arg tf_map_scanmatch_transform_frame_name)" />
   </node>
   
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find mapping)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find mapping)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find mapping)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find mapping)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find mapping)/config/base_local_planner_params.yaml" command="load" />
+  </node>
+
+
+  <include file="$(find explore_lite)/launch/explore_costmap.launch" />
+  <node name="mapping_node"
+    pkg="mapping" 
+    type="mapping_node" 
+    output="screen"/>
+    
+    <node name="map_monitor" 
+    pkg="mapping" 
+    type="map_monitor" 
+    output="screen"/> 
+
 </launch>
