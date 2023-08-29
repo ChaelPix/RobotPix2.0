@@ -5,4 +5,4 @@ Description: Description of dashboard
 Version: 0.0.0
 Cflags: 
 Libs: -L${prefix}/lib -ldashboard
-Requires: rospy std_msgs
+Requires: rospy std_msgs geometry_msgs

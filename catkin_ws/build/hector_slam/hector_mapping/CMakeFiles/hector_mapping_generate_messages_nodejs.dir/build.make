@@ -71,9 +71,9 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_nodejs: /
 
 /home/robot/robotPix/catkin_ws/devel/share/gennodejs/ros/hector_mapping/srv/ResetMapping.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/robot/robotPix/catkin_ws/devel/share/gennodejs/ros/hector_mapping/srv/ResetMapping.js: /home/robot/robotPix/catkin_ws/src/hector_slam/hector_mapping/srv/ResetMapping.srv
+/home/robot/robotPix/catkin_ws/devel/share/gennodejs/ros/hector_mapping/srv/ResetMapping.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/robot/robotPix/catkin_ws/devel/share/gennodejs/ros/hector_mapping/srv/ResetMapping.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/robot/robotPix/catkin_ws/devel/share/gennodejs/ros/hector_mapping/srv/ResetMapping.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/robot/robotPix/catkin_ws/devel/share/gennodejs/ros/hector_mapping/srv/ResetMapping.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from hector_mapping/ResetMapping.srv"
 	cd /home/robot/robotPix/catkin_ws/build/hector_slam/hector_mapping && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/robot/robotPix/catkin_ws/src/hector_slam/hector_mapping/srv/ResetMapping.srv -Ihector_mapping:/home/robot/robotPix/catkin_ws/src/hector_slam/hector_mapping/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p hector_mapping -o /home/robot/robotPix/catkin_ws/devel/share/gennodejs/ros/hector_mapping/srv
 

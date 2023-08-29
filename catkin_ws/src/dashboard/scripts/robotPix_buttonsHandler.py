@@ -5,6 +5,8 @@ import robotPix_globalVars
 import subprocess
 from grove_LedButton import GroveLedButton 
 
+from std_msgs.msg import String
+from geometry_msgs.msg import Vector3
 #------------------
 LeftButton = 0
 RightButton = 1
@@ -21,6 +23,7 @@ settingsDisplayNames = ["Choix du Package", "Desactiver Robot", "Eteindre Raspi"
 rightBtn = None
 leftBtn = None
 selectedSetting = 0
+isOff = False
 
 def getButtonInput(action, buttonPin):
     print("action : " + str(action) + " button : " + str(buttonPin))
@@ -156,6 +159,10 @@ def AskToStopCode():
     setText("Stopper le Code?" + "\nOui          Non")
 
 def StopCode():
+    global isOff
+    if(isOff):
+         return
+    isOff = True
     setText("----------------Robot Desactive")
     main_robotPix.shutdown_roscore()
     robotPix_globalVars.scriptRunning = False
@@ -166,6 +173,10 @@ def AskToStopRapi():
     setText("Eteindre Raspi?" + "\nOui          Non")
 
 def StopPi():
+    global isOff
+    if(isOff):
+         return
+    isOff = True
     setText("----------------Raspi Desactivee")
     subprocess.Popen(['sudo','poweroff'])
     #subprocess.run(["systemctl", "start", "poweroff_nopass.service"])
@@ -201,6 +212,16 @@ def initialize():
 
     rightBtn.led.light(False)
     leftBtn.led.light(False)
+
+
+def SetButtonState(ledId, action):
+    if(ledId== 0):
+         global leftBtn
+         leftBtn.led.light(action == 1)
+    elif(ledId== 1):
+         global rightBtn
+         rightBtn.led.light(action == 1)
+
 
 #global rightBtn
 #rightBtn.led.light(True)

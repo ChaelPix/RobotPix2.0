@@ -9,7 +9,7 @@ ros::Publisher pubMotors;
 ros::Publisher pubWallFront;
 bool isDetectingWall;
 
-float wallDistance = 0.2;
+float wallDistance = 0.2; //~ 10cm
 
 void PublishToMotors(int action)
 {

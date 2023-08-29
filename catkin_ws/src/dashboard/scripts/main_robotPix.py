@@ -14,6 +14,8 @@ import robotPix_globalVars
 import rospy
 import std_msgs
 from std_srvs.srv import Empty
+from std_msgs.msg import String
+from geometry_msgs.msg import Vector3
 
 #----Settings-------
 leftButtonPin = 24 #button 0
@@ -39,6 +41,11 @@ def start_rosserial():
     global rosserial_process
     rosserial_process = subprocess.Popen(["rosrun", "rosserial_python", "serial_node.py", "/dev/ttyMegaPi"])
 
+def SetLCDText(data):
+    setText(data.data)
+
+def CallButton(data):
+    robotPix_buttonsHandler.SetButtonState(data.x, data.y)
 
 def start_ros():
     # setText("    Starting\n   Roscore...")
@@ -50,6 +57,9 @@ def start_ros():
     start_rosserial()
 
     rospy.init_node('dashboard_main')
+
+    rospy.Subscriber('setLcdText', String, SetLCDText)
+    rospy.Subscriber('setButtonState', Vector3, CallButton)
 
 
 def bool_isRosRunning():
@@ -109,6 +119,14 @@ def RestartRobotAferStop():
     robotPix_globalVars.robotState = 2
     robotPix_buttonsHandler.SettingsSelector(0)
     print("Roscore and Rosserial are ready.")
+
+
+def startRos():
+    rospy.init_node('dashboard_sub')
+
+    
+
+    rospy.spin()
 
 #----------MAIN--------------------
 def main():

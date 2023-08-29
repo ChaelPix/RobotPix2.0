@@ -4,12 +4,13 @@ project(dashboard)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
+  geometry_msgs
 )
 
 # Déclarer la configuration du package
 catkin_package(
   LIBRARIES ${PROJECT_NAME}
-  CATKIN_DEPENDS rospy std_msgs
+  CATKIN_DEPENDS rospy std_msgs geometry_msgs
 )
 
 # Inclure les répertoires

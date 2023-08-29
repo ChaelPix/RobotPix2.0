@@ -1,11 +1,14 @@
 #include <ros/ros.h>
 #include <std_msgs/Bool.h>
 #include <std_msgs/Float32.h>
+#include <std_msgs/String.h>
 #include <geometry_msgs/Vector3.h>
 
 ros::Publisher pubStartWallDetection;
-
+ros::Publisher pubLcd;
+ros::Publisher pubLed;
 ros::Publisher pubMotors;
+
 void StopMotors()
 {
     geometry_msgs::Vector3 robot_msg;
@@ -17,6 +20,13 @@ void StopMotors()
 void WallDetected(const std_msgs::Bool& msg)
 {
     StopMotors();
+    std_msgs::String lcdTxt;
+    lcdTxt.data = "Wall is Detected";
+    pubLcd.publish(lcdTxt);
+
+    geometry_msgs::Vector3 ledAction;
+    ledAction.y = 1;
+    pubLed.publish(ledAction);
 }
 
 int main(int argc, char** argv) {
@@ -30,6 +40,9 @@ int main(int argc, char** argv) {
     //Pubs
     pubStartWallDetection = nh.advertise<std_msgs::Float32>("/startWallDetection", 10);
     pubMotors = nh.advertise<geometry_msgs::Vector3>("/motorsControl", 10);
+
+    pubLcd = nh.advertise<std_msgs::String>("/setLcdText", 10);
+    pubLed = nh.advertise<geometry_msgs::Vector3>("/setButtonState", 10);
     ros::Duration(2.0).sleep();
    
     //----
