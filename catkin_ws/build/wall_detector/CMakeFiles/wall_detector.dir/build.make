@@ -57,51 +57,51 @@ include wall_detector/CMakeFiles/wall_detector.dir/progress.make
 # Include the compile flags for this target's objects.
 include wall_detector/CMakeFiles/wall_detector.dir/flags.make
 
-wall_detector/CMakeFiles/wall_detector.dir/src/wall_detector.cpp.o: wall_detector/CMakeFiles/wall_detector.dir/flags.make
-wall_detector/CMakeFiles/wall_detector.dir/src/wall_detector.cpp.o: /home/robot/robotPix/catkin_ws/src/wall_detector/src/wall_detector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object wall_detector/CMakeFiles/wall_detector.dir/src/wall_detector.cpp.o"
-	cd /home/robot/robotPix/catkin_ws/build/wall_detector && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wall_detector.dir/src/wall_detector.cpp.o -c /home/robot/robotPix/catkin_ws/src/wall_detector/src/wall_detector.cpp
+wall_detector/CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.o: wall_detector/CMakeFiles/wall_detector.dir/flags.make
+wall_detector/CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.o: /home/robot/robotPix/catkin_ws/src/wall_detector/src/wall_techControl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object wall_detector/CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.o"
+	cd /home/robot/robotPix/catkin_ws/build/wall_detector && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.o -c /home/robot/robotPix/catkin_ws/src/wall_detector/src/wall_techControl.cpp
 
-wall_detector/CMakeFiles/wall_detector.dir/src/wall_detector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wall_detector.dir/src/wall_detector.cpp.i"
-	cd /home/robot/robotPix/catkin_ws/build/wall_detector && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robot/robotPix/catkin_ws/src/wall_detector/src/wall_detector.cpp > CMakeFiles/wall_detector.dir/src/wall_detector.cpp.i
+wall_detector/CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.i"
+	cd /home/robot/robotPix/catkin_ws/build/wall_detector && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robot/robotPix/catkin_ws/src/wall_detector/src/wall_techControl.cpp > CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.i
 
-wall_detector/CMakeFiles/wall_detector.dir/src/wall_detector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wall_detector.dir/src/wall_detector.cpp.s"
-	cd /home/robot/robotPix/catkin_ws/build/wall_detector && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robot/robotPix/catkin_ws/src/wall_detector/src/wall_detector.cpp -o CMakeFiles/wall_detector.dir/src/wall_detector.cpp.s
+wall_detector/CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.s"
+	cd /home/robot/robotPix/catkin_ws/build/wall_detector && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robot/robotPix/catkin_ws/src/wall_detector/src/wall_techControl.cpp -o CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.s
 
 # Object files for target wall_detector
 wall_detector_OBJECTS = \
-"CMakeFiles/wall_detector.dir/src/wall_detector.cpp.o"
+"CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.o"
 
 # External object files for target wall_detector
 wall_detector_EXTERNAL_OBJECTS =
 
-wall_detector/wall_detector: wall_detector/CMakeFiles/wall_detector.dir/src/wall_detector.cpp.o
-wall_detector/wall_detector: wall_detector/CMakeFiles/wall_detector.dir/build.make
-wall_detector/wall_detector: /opt/ros/noetic/lib/libroscpp.so
-wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libpthread.so
-wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0
-wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
-wall_detector/wall_detector: /opt/ros/noetic/lib/librosconsole.so
-wall_detector/wall_detector: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-wall_detector/wall_detector: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
-wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0
-wall_detector/wall_detector: /opt/ros/noetic/lib/libxmlrpcpp.so
-wall_detector/wall_detector: /opt/ros/noetic/lib/libroscpp_serialization.so
-wall_detector/wall_detector: /opt/ros/noetic/lib/librostime.so
-wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0
-wall_detector/wall_detector: /opt/ros/noetic/lib/libcpp_common.so
-wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
-wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
-wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
-wall_detector/wall_detector: wall_detector/CMakeFiles/wall_detector.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable wall_detector"
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: wall_detector/CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.o
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: wall_detector/CMakeFiles/wall_detector.dir/build.make
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /opt/ros/noetic/lib/libroscpp.so
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libpthread.so
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /opt/ros/noetic/lib/librosconsole.so
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /opt/ros/noetic/lib/librostime.so
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /opt/ros/noetic/lib/libcpp_common.so
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
+/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector: wall_detector/CMakeFiles/wall_detector.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector"
 	cd /home/robot/robotPix/catkin_ws/build/wall_detector && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wall_detector.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-wall_detector/CMakeFiles/wall_detector.dir/build: wall_detector/wall_detector
+wall_detector/CMakeFiles/wall_detector.dir/build: /home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector
 
 .PHONY : wall_detector/CMakeFiles/wall_detector.dir/build
 

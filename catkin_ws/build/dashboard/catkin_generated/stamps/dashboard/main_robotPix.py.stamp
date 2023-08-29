@@ -21,7 +21,7 @@ rightButtonPin = 26 #button 1
 
 #--Pckgs
 packageNames = ["wall_detector", "mapping"]
-nodeLaunchNames = ["wall_detector.launch", "startMapping.launch"]
+nodeLaunchNames = ["wall_techControl.launch", "startMapping.launch"]
 hasPackageLidar = [1, 1]
 #-------------------
 roscore_process = None

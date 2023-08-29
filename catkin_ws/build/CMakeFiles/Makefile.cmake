@@ -686,5 +686,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "mapping/CMakeFiles/move_base_gencfg.dir/DependInfo.cmake"
   "mapping/CMakeFiles/mapping_node.dir/DependInfo.cmake"
   "mapping/CMakeFiles/map_monitor.dir/DependInfo.cmake"
+  "wall_detector/CMakeFiles/wall_detector_tech.dir/DependInfo.cmake"
   "wall_detector/CMakeFiles/wall_detector_node.dir/DependInfo.cmake"
   )

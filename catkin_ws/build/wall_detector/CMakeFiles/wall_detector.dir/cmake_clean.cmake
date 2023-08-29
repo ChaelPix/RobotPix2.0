@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/wall_detector.dir/src/wall_detector.cpp.o"
-  "wall_detector"
-  "wall_detector.pdb"
+  "/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector"
+  "/home/robot/robotPix/catkin_ws/devel/lib/wall_detector/wall_detector.pdb"
+  "CMakeFiles/wall_detector.dir/src/wall_techControl.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

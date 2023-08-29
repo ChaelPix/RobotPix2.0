@@ -68,6 +68,28 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -100,28 +122,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+wall_detector/CMakeFiles/wall_detector_tech.dir/rule:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wall_detector/CMakeFiles/wall_detector_tech.dir/rule
+.PHONY : wall_detector/CMakeFiles/wall_detector_tech.dir/rule
+
+# Convenience name for target.
+wall_detector_tech: wall_detector/CMakeFiles/wall_detector_tech.dir/rule
+
+.PHONY : wall_detector_tech
+
+# fast build rule for target.
+wall_detector_tech/fast:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f wall_detector/CMakeFiles/wall_detector_tech.dir/build.make wall_detector/CMakeFiles/wall_detector_tech.dir/build
+.PHONY : wall_detector_tech/fast
+
+# Convenience name for target.
 wall_detector/CMakeFiles/wall_detector_node.dir/rule:
 	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wall_detector/CMakeFiles/wall_detector_node.dir/rule
 .PHONY : wall_detector/CMakeFiles/wall_detector_node.dir/rule
@@ -209,6 +224,33 @@ src/wall_detector.cpp.s:
 	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f wall_detector/CMakeFiles/wall_detector_node.dir/build.make wall_detector/CMakeFiles/wall_detector_node.dir/src/wall_detector.cpp.s
 .PHONY : src/wall_detector.cpp.s
 
+src/wall_techControl.o: src/wall_techControl.cpp.o
+
+.PHONY : src/wall_techControl.o
+
+# target to build an object file
+src/wall_techControl.cpp.o:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f wall_detector/CMakeFiles/wall_detector_tech.dir/build.make wall_detector/CMakeFiles/wall_detector_tech.dir/src/wall_techControl.cpp.o
+.PHONY : src/wall_techControl.cpp.o
+
+src/wall_techControl.i: src/wall_techControl.cpp.i
+
+.PHONY : src/wall_techControl.i
+
+# target to preprocess a source file
+src/wall_techControl.cpp.i:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f wall_detector/CMakeFiles/wall_detector_tech.dir/build.make wall_detector/CMakeFiles/wall_detector_tech.dir/src/wall_techControl.cpp.i
+.PHONY : src/wall_techControl.cpp.i
+
+src/wall_techControl.s: src/wall_techControl.cpp.s
+
+.PHONY : src/wall_techControl.s
+
+# target to generate assembly for a file
+src/wall_techControl.cpp.s:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f wall_detector/CMakeFiles/wall_detector_tech.dir/build.make wall_detector/CMakeFiles/wall_detector_tech.dir/src/wall_techControl.cpp.s
+.PHONY : src/wall_techControl.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -216,16 +258,20 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
+	@echo "... wall_detector_tech"
 	@echo "... install/local"
 	@echo "... wall_detector_node"
 	@echo "... src/wall_detector.o"
 	@echo "... src/wall_detector.i"
 	@echo "... src/wall_detector.s"
+	@echo "... src/wall_techControl.o"
+	@echo "... src/wall_techControl.i"
+	@echo "... src/wall_techControl.s"
 .PHONY : help
 
 

@@ -1,10 +1,15 @@
 #include <ros/ros.h>
 #include <sensor_msgs/LaserScan.h>
 #include <std_msgs/Bool.h>
+#include <std_msgs/Float32.h>
 #include <geometry_msgs/Vector3.h>
 
-const float robotSpeed = 150;
+const float robotSpeed = 125;
 ros::Publisher pubMotors;
+ros::Publisher pubWallFront;
+bool isDetectingWall;
+
+float wallDistance = 0.2;
 
 void PublishToMotors(int action)
 {
@@ -16,7 +21,10 @@ void PublishToMotors(int action)
 
 void lidarCallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
 
-    const float WALL_DISTANCE_THRESHOLD = 0.2;
+    if (!isDetectingWall)
+        return;
+
+    const float WALL_DISTANCE_THRESHOLD = wallDistance;
 
     // Intervalles d'angles pour détecter un mur devant (en radians)
     const float MIN_ANGLE = -15 * M_PI / 180;  // -15 degrés convertis en radians
@@ -30,15 +38,20 @@ void lidarCallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
         if (msg->ranges[i] < WALL_DISTANCE_THRESHOLD) {
 
             ROS_INFO("Wall in Front!"); 
-            PublishToMotors(0);
+            isDetectingWall = false;
+            std_msgs::Bool msg;
+            msg.data = true;
+            pubWallFront.publish(msg);
             return;
         }
     }
 }
 
-void MotorsCallback(const std_msgs::Bool& msg)
+void StartDetection(const std_msgs::Float32& msg)
 {
-    ROS_INFO("Motors Callback"); 
+    PublishToMotors(1); //MoveForward
+    wallDistance = msg.data;
+    isDetectingWall = true;
 }
 
 int main(int argc, char** argv) {
@@ -48,14 +61,15 @@ int main(int argc, char** argv) {
 
     //Subs
     ros::Subscriber lidar_sub = nh.subscribe("/scan", 10, lidarCallback);
-    ros::Subscriber motors_sub = nh.subscribe("MotorsCallBack", 10, MotorsCallback);
+    ros::Subscriber detectionActivation_sub = nh.subscribe("/startWallDetection", 10, StartDetection);
 
     //Pubs
     pubMotors = nh.advertise<geometry_msgs::Vector3>("/motorsControl", 10);
+    pubWallFront = nh.advertise<std_msgs::Bool>("/frontWallDetection", 10);
     ros::Duration(2.0).sleep();
    
     //----
-    PublishToMotors(1); //MoveForward
+
 
     //----
     ros::spin();

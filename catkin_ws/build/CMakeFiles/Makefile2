@@ -826,6 +826,7 @@ vision_opencv/vision_opencv/clean:
 # Directory level rules for directory wall_detector
 
 # Recursive "all" directory target.
+wall_detector/all: wall_detector/CMakeFiles/wall_detector_tech.dir/all
 wall_detector/all: wall_detector/CMakeFiles/wall_detector_node.dir/all
 
 .PHONY : wall_detector/all
@@ -836,6 +837,7 @@ wall_detector/preinstall:
 .PHONY : wall_detector/preinstall
 
 # Recursive "clean" directory target.
+wall_detector/clean: wall_detector/CMakeFiles/wall_detector_tech.dir/clean
 wall_detector/clean: wall_detector/CMakeFiles/wall_detector_node.dir/clean
 
 .PHONY : wall_detector/clean
@@ -991,7 +993,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtes
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/rule
@@ -1018,7 +1020,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/rule
@@ -1040,12 +1042,12 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=23,24 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=22,23 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googletest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/rule
@@ -1067,12 +1069,12 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=21,22 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=21 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googletest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/rule
@@ -1666,7 +1668,7 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_genpy.dir/all: hector_sla
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_genpy.dir/rule
@@ -1695,12 +1697,12 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/_hector_nav_msgs_generate_messages_check_deps_GetRecoveryInfo.dir/all
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=68,69,70,71,72,73 "Built target hector_nav_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=67,68,69,70,71 "Built target hector_nav_msgs_generate_messages_py"
 .PHONY : hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/rule
@@ -1758,7 +1760,7 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 24
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/rule
@@ -1868,7 +1870,7 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/_hector_nav_msgs_generate_messages_check_deps_GetRecoveryInfo.dir/all
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=49,50,51,52 "Built target hector_nav_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=48,49,50,51 "Built target hector_nav_msgs_generate_messages_cpp"
 .PHONY : hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2010,7 +2012,7 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/_hector_nav_msgs_generate_messages_check_deps_GetRecoveryInfo.dir/all
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=53,54,55,56,57,58 "Built target hector_nav_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=52,53,54,55,56,57 "Built target hector_nav_msgs_generate_messages_eus"
 .PHONY : hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2071,7 +2073,7 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.di
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/_hector_nav_msgs_generate_messages_check_deps_GetRecoveryInfo.dir/all
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=59,60,61,62 "Built target hector_nav_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=58,59,60,61 "Built target hector_nav_msgs_generate_messages_lisp"
 .PHONY : hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2105,7 +2107,7 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/_hector_nav_msgs_generate_messages_check_deps_GetRecoveryInfo.dir/all
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=63,64,65,66,67 "Built target hector_nav_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=62,63,64,65,66 "Built target hector_nav_msgs_generate_messages_nodejs"
 .PHONY : hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2330,7 +2332,7 @@ hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_g
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=12 "Built target geotiff_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=11,12 "Built target geotiff_node"
 .PHONY : hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2505,7 +2507,7 @@ hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/rule
@@ -2568,7 +2570,7 @@ hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/rule
@@ -2626,7 +2628,7 @@ hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: he
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build.make hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build.make hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=25 "Built target hector_geotiff_plugins"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=24,25 "Built target hector_geotiff_plugins"
 .PHONY : hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2807,7 +2809,7 @@ rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFi
 rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
 	$(MAKE) -f rplidar_control/CMakeFiles/rplidar_control_node.dir/build.make rplidar_control/CMakeFiles/rplidar_control_node.dir/depend
 	$(MAKE) -f rplidar_control/CMakeFiles/rplidar_control_node.dir/build.make rplidar_control/CMakeFiles/rplidar_control_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=97,98 "Built target rplidar_control_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=95,96 "Built target rplidar_control_node"
 .PHONY : rplidar_control/CMakeFiles/rplidar_control_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3104,12 +3106,12 @@ vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
 vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/all: vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all
 	$(MAKE) -f vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/build.make vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/depend
 	$(MAKE) -f vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/build.make vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=9,10,11 "Built target cv_bridge_boost"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=9,10 "Built target cv_bridge_boost"
 .PHONY : vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/all
 
 # Build rule for subdir invocation for target.
 vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge_boost.dir/rule
@@ -3261,7 +3263,7 @@ vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/all: vision_open
 
 # Build rule for subdir invocation for target.
 vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge.dir/rule
@@ -3317,7 +3319,7 @@ vision_opencv/cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/all: vision_opencv/c
 
 # Build rule for subdir invocation for target.
 vision_opencv/cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 vision_opencv/cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : vision_opencv/cv_bridge/test/CMakeFiles/cv_bridge-utest.dir/rule
@@ -3344,7 +3346,7 @@ vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/all: visio
 
 # Build rule for subdir invocation for target.
 vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest.dir/rule
@@ -3484,7 +3486,7 @@ vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest_cv_bridge-utes
 
 # Build rule for subdir invocation for target.
 vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest_cv_bridge-utest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest_cv_bridge-utest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest_cv_bridge-utest.dir/rule
@@ -3630,12 +3632,12 @@ vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: vision_opencv/cv
 vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/build.make vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/depend
 	$(MAKE) -f vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/build.make vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=76,77 "Built target image_geometry"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=74,75,76 "Built target image_geometry"
 .PHONY : vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all
 
 # Build rule for subdir invocation for target.
 vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/rule
@@ -3908,7 +3910,7 @@ vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/all: gtest
 vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/all: vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all
 	$(MAKE) -f vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/build.make vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/depend
 	$(MAKE) -f vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/build.make vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=78,79 "Built target image_geometry-utest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=77,78 "Built target image_geometry-utest"
 .PHONY : vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4046,7 +4048,7 @@ vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/all: 
 vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/all: vision_opencv/image_geometry/CMakeFiles/image_geometry.dir/all
 	$(MAKE) -f vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/build.make vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/depend
 	$(MAKE) -f vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/build.make vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=80,81 "Built target image_geometry-utest-equi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=79,80 "Built target image_geometry-utest-equi"
 .PHONY : vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4073,7 +4075,7 @@ vision_opencv/image_geometry/test/CMakeFiles/image_geometry-utest-equi.dir/clean
 hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/all: vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all
 	$(MAKE) -f hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/build.make hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/depend
 	$(MAKE) -f hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/build.make hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=86,87 "Built target map_to_image_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=84,85 "Built target map_to_image_node"
 .PHONY : hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4100,12 +4102,12 @@ hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/cle
 pixy2_camera/CMakeFiles/pixy2_node.dir/all: vision_opencv/cv_bridge/src/CMakeFiles/cv_bridge.dir/all
 	$(MAKE) -f pixy2_camera/CMakeFiles/pixy2_node.dir/build.make pixy2_camera/CMakeFiles/pixy2_node.dir/depend
 	$(MAKE) -f pixy2_camera/CMakeFiles/pixy2_node.dir/build.make pixy2_camera/CMakeFiles/pixy2_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=89,90,91,92,93,94 "Built target pixy2_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=88,89,90,91,92 "Built target pixy2_node"
 .PHONY : pixy2_camera/CMakeFiles/pixy2_node.dir/all
 
 # Build rule for subdir invocation for target.
 pixy2_camera/CMakeFiles/pixy2_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 pixy2_camera/CMakeFiles/pixy2_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : pixy2_camera/CMakeFiles/pixy2_node.dir/rule
@@ -4127,12 +4129,12 @@ pixy2_camera/CMakeFiles/pixy2_node.dir/clean:
 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/all:
 	$(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/depend
 	$(MAKE) -f hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build.make hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=82,83 "Built target imu_attitude_to_tf_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=81 "Built target imu_attitude_to_tf_node"
 .PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/all
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/rule
@@ -4559,7 +4561,7 @@ hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_eus.
 hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/all:
 	$(MAKE) -f hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/build.make hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/depend
 	$(MAKE) -f hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/build.make hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=95,96 "Built target pose_and_orientation_to_imu_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=93,94 "Built target pose_and_orientation_to_imu_node"
 .PHONY : hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4650,7 +4652,7 @@ hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/rule
@@ -4726,12 +4728,12 @@ hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/build.make hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/depend
 	$(MAKE) -f hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/build.make hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=74,75 "Built target hector_trajectory_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=72,73 "Built target hector_trajectory_server"
 .PHONY : hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/rule
@@ -4783,7 +4785,7 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/a
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/all: hector_slam/hector_mapping/CMakeFiles/_hector_mapping_generate_messages_check_deps_ResetMapping.dir/all
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/depend
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=32,33,34 "Built target hector_mapping_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=31,32,33 "Built target hector_mapping_generate_messages_cpp"
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4837,12 +4839,12 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/clean:
 hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/all: hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/all
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/depend
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=28,29,30,31 "Built target hector_mapping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=28,29,30 "Built target hector_mapping"
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/all
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/rule
@@ -4950,7 +4952,7 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_geneus.dir/all: hector_slam
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_geneus.dir/rule
@@ -5005,12 +5007,12 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_nodejs.di
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_nodejs.dir/all: hector_slam/hector_mapping/CMakeFiles/_hector_mapping_generate_messages_check_deps_ResetMapping.dir/all
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_nodejs.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_nodejs.dir/depend
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_nodejs.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=41,42,43 "Built target hector_mapping_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=41,42 "Built target hector_mapping_generate_messages_nodejs"
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_nodejs.dir/rule
@@ -5035,12 +5037,12 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_eus.dir/a
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_eus.dir/all: hector_slam/hector_mapping/CMakeFiles/_hector_mapping_generate_messages_check_deps_ResetMapping.dir/all
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_eus.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_eus.dir/depend
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_eus.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=35,36,37 "Built target hector_mapping_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=34,35,36,37 "Built target hector_mapping_generate_messages_eus"
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_eus.dir/rule
@@ -5125,7 +5127,7 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_gennodejs.dir/all: hector_s
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_gennodejs.dir/rule
@@ -5150,7 +5152,7 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/al
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/all: hector_slam/hector_mapping/CMakeFiles/_hector_mapping_generate_messages_check_deps_ResetMapping.dir/all
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/depend
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=44,45,46,47,48 "Built target hector_mapping_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=43,44,45,46,47 "Built target hector_mapping_generate_messages_py"
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5876,12 +5878,12 @@ mapping/CMakeFiles/mapping_node.dir/all: mapping/CMakeFiles/move_base_msgs_gener
 mapping/CMakeFiles/mapping_node.dir/all: mapping/CMakeFiles/move_base_gencfg.dir/all
 	$(MAKE) -f mapping/CMakeFiles/mapping_node.dir/build.make mapping/CMakeFiles/mapping_node.dir/depend
 	$(MAKE) -f mapping/CMakeFiles/mapping_node.dir/build.make mapping/CMakeFiles/mapping_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=88 "Built target mapping_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=86,87 "Built target mapping_node"
 .PHONY : mapping/CMakeFiles/mapping_node.dir/all
 
 # Build rule for subdir invocation for target.
 mapping/CMakeFiles/mapping_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/mapping_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
 .PHONY : mapping/CMakeFiles/mapping_node.dir/rule
@@ -5903,7 +5905,7 @@ mapping/CMakeFiles/mapping_node.dir/clean:
 mapping/CMakeFiles/map_monitor.dir/all:
 	$(MAKE) -f mapping/CMakeFiles/map_monitor.dir/build.make mapping/CMakeFiles/map_monitor.dir/depend
 	$(MAKE) -f mapping/CMakeFiles/map_monitor.dir/build.make mapping/CMakeFiles/map_monitor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=84,85 "Built target map_monitor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=82,83 "Built target map_monitor"
 .PHONY : mapping/CMakeFiles/map_monitor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5922,6 +5924,57 @@ map_monitor: mapping/CMakeFiles/map_monitor.dir/rule
 mapping/CMakeFiles/map_monitor.dir/clean:
 	$(MAKE) -f mapping/CMakeFiles/map_monitor.dir/build.make mapping/CMakeFiles/map_monitor.dir/clean
 .PHONY : mapping/CMakeFiles/map_monitor.dir/clean
+
+#=============================================================================
+# Target rules for target wall_detector/CMakeFiles/wall_detector_tech.dir
+
+# All Build rule for target.
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+wall_detector/CMakeFiles/wall_detector_tech.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_tech.dir/build.make wall_detector/CMakeFiles/wall_detector_tech.dir/depend
+	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_tech.dir/build.make wall_detector/CMakeFiles/wall_detector_tech.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=99,100 "Built target wall_detector_tech"
+.PHONY : wall_detector/CMakeFiles/wall_detector_tech.dir/all
+
+# Build rule for subdir invocation for target.
+wall_detector/CMakeFiles/wall_detector_tech.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 wall_detector/CMakeFiles/wall_detector_tech.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+.PHONY : wall_detector/CMakeFiles/wall_detector_tech.dir/rule
+
+# Convenience name for target.
+wall_detector_tech: wall_detector/CMakeFiles/wall_detector_tech.dir/rule
+
+.PHONY : wall_detector_tech
+
+# clean rule for target.
+wall_detector/CMakeFiles/wall_detector_tech.dir/clean:
+	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_tech.dir/build.make wall_detector/CMakeFiles/wall_detector_tech.dir/clean
+.PHONY : wall_detector/CMakeFiles/wall_detector_tech.dir/clean
 
 #=============================================================================
 # Target rules for target wall_detector/CMakeFiles/wall_detector_node.dir
@@ -5954,7 +6007,7 @@ wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMa
 wall_detector/CMakeFiles/wall_detector_node.dir/all: vision_opencv/cv_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_node.dir/build.make wall_detector/CMakeFiles/wall_detector_node.dir/depend
 	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_node.dir/build.make wall_detector/CMakeFiles/wall_detector_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=99,100 "Built target wall_detector_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=97,98 "Built target wall_detector_node"
 .PHONY : wall_detector/CMakeFiles/wall_detector_node.dir/all
 
 # Build rule for subdir invocation for target.

@@ -13,6 +13,8 @@ sensor_msgs/LaserScan.h
 -
 std_msgs/Bool.h
 -
+std_msgs/Float32.h
+-
 geometry_msgs/Vector3.h
 -
 
@@ -701,6 +703,22 @@ std_msgs/Header.h
 -
 
 /opt/ros/noetic/include/std_msgs/Bool.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/noetic/include/std_msgs/Float32.h
 string
 -
 vector

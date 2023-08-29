@@ -2391,6 +2391,19 @@ map_monitor/fast:
 .PHONY : map_monitor/fast
 
 #=============================================================================
+# Target rules for targets named wall_detector_tech
+
+# Build rule for target.
+wall_detector_tech: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wall_detector_tech
+.PHONY : wall_detector_tech
+
+# fast build rule for target.
+wall_detector_tech/fast:
+	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_tech.dir/build.make wall_detector/CMakeFiles/wall_detector_tech.dir/build
+.PHONY : wall_detector_tech/fast
+
+#=============================================================================
 # Target rules for targets named wall_detector_node
 
 # Build rule for target.
@@ -2587,6 +2600,7 @@ help:
 	@echo "... move_base_gencfg"
 	@echo "... mapping_node"
 	@echo "... map_monitor"
+	@echo "... wall_detector_tech"
 	@echo "... wall_detector_node"
 .PHONY : help
 

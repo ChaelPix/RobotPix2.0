@@ -380,10 +380,11 @@
 /home/robot/robotPix/catkin_ws/build/mapping/CMakeFiles/map_monitor.dir
 /home/robot/robotPix/catkin_ws/build/mapping/CMakeFiles/list_install_components.dir
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/install/strip.dir
+/home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/edit_cache.dir
+/home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/test.dir
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/install.dir
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/list_install_components.dir
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/rebuild_cache.dir
-/home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/edit_cache.dir
-/home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/test.dir
+/home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/wall_detector_tech.dir
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/install/local.dir
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/wall_detector_node.dir
