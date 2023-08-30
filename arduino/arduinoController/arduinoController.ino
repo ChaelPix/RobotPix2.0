@@ -17,6 +17,7 @@ ros::NodeHandle nh;
 //-------PUBs
 std_msgs::Bool callback_msg;
 ros::Publisher pubMotorsCallBack("/MotorsCallBack", &callback_msg);
+ros::Publisher pubRotateCallBack("/RotateCallBack", &callback_msg);
 
 //-----Motors - x: speed, y: 0 = Stop, 1 = Forward, 2 = Backward, 3 = Left, 4 = Right
 void GetMotorsControl(const geometry_msgs::Vector3& msg)
@@ -61,6 +62,7 @@ void setup()
 
   //Pubs
   nh.advertise(pubMotorsCallBack);
+  nh.advertise(pubRotateCallBack);
 
   SetupGyro();
 }

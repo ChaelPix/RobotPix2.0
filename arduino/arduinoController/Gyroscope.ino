@@ -61,7 +61,13 @@ void AngleRotate_Set(float angleTarget, int rotatingSpeed) {
         }
       }
 
-      while ((abs(GetGyroZ() - angleTarget) > 1.0) || !_isStopped) { 
+      while ((abs(GetGyroZ() - angleTarget) > 1.0) && !_isStopped) { 
         _loop();
+      }
+
+      if(!_isStopped)
+      {
+        callback_msg.data = true;
+        pubRotateCallBack.publish(&callback_msg);
       }
 }
