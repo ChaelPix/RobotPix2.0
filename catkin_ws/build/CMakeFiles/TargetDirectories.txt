@@ -382,6 +382,7 @@
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/install/strip.dir
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/edit_cache.dir
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/test.dir
+/home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/wall_detector_mapping.dir
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/install.dir
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/list_install_components.dir
 /home/robot/robotPix/catkin_ws/build/wall_detector/CMakeFiles/rebuild_cache.dir

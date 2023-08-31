@@ -8,6 +8,7 @@ ros::Publisher pubStartWallDetection;
 ros::Publisher pubLcd;
 ros::Publisher pubLed;
 ros::Publisher pubMotors;
+bool _isInit = false;
 
 void StopMotors()
 {
@@ -19,9 +20,11 @@ void StopMotors()
 
 void WallDetected(const std_msgs::Bool& msg)
 {
+    if(!_isInit)
+        return;
     StopMotors();
     std_msgs::String lcdTxt;
-    lcdTxt.data = "Wall is Detected";
+    lcdTxt.data = "Mur Droit Devant";
     pubLcd.publish(lcdTxt);
 
     geometry_msgs::Vector3 ledAction;
@@ -33,7 +36,7 @@ int main(int argc, char** argv) {
     //Node init
     ros::init(argc, argv, "wall_techControl");
     ros::NodeHandle nh;
-
+    _isInit = true;
     //Subs
     ros::Subscriber lidar_sub = nh.subscribe("/frontWallDetection", 10, WallDetected);
 

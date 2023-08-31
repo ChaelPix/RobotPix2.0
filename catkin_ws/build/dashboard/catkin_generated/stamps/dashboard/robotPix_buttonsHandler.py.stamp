@@ -17,7 +17,7 @@ LeftButtonHeld = 1
 RightButtonClicked = 2
 RightButtonHeld = 3
 #------------------
-packagesDisplayNames = ["Detection Mur", "Mapping"]
+packagesDisplayNames = ["Detection Mur", "Creer la Map"]
 settingsDisplayNames = ["Choix du Package", "Desactiver Robot", "Eteindre Raspi"]
 #------------------
 rightBtn = None
@@ -130,6 +130,9 @@ def PackageSelector(x):
             + ":" +  packagesDisplayNames[id]
             +"\n<-|Strt  Opts|->")
     
+    print(id)
+    print(robotPix_globalVars.loadedScript)
+    
 #---Robot State = 2 ------
 def SettingsSelector(x):
     global selectedSetting
@@ -159,10 +162,12 @@ def AskToStopCode():
     setText("Stopper le Code?" + "\nOui          Non")
 
 def StopCode():
+    main_robotPix.StopRobot()
     global isOff
     if(isOff):
          return
     isOff = True
+    SetButtonState(0, 0)
     setText("----------------Robot Desactive")
     main_robotPix.shutdown_roscore()
     robotPix_globalVars.scriptRunning = False

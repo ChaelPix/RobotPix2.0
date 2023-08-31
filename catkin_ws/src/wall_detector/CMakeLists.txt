@@ -23,11 +23,14 @@ include_directories(
 # Ajouter l'exécutable
 add_executable(${PROJECT_NAME}_node src/wall_detector.cpp)
 add_executable(${PROJECT_NAME}_tech src/wall_techControl.cpp)
+add_executable(${PROJECT_NAME}_mapping src/mapping.cpp)
 
 # Ajouter les dépendances
 add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(${PROJECT_NAME}_tech ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(${PROJECT_NAME}_mapping ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 # Lier les bibliothèques
 target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES})
 target_link_libraries(${PROJECT_NAME}_tech ${catkin_LIBRARIES})
+target_link_libraries(${PROJECT_NAME}_mapping ${catkin_LIBRARIES})

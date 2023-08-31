@@ -4,7 +4,7 @@
 #include <std_msgs/Float32.h>
 #include <geometry_msgs/Vector3.h>
 
-const float robotSpeed = 125;
+const float robotSpeed = 50;
 ros::Publisher pubMotors;
 ros::Publisher pubWallFront;
 bool isDetectingWall;

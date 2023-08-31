@@ -22,14 +22,16 @@ leftButtonPin = 24 #button 0
 rightButtonPin = 26 #button 1
 
 #--Pckgs
-packageNames = ["wall_detector", "mapping"]
-nodeLaunchNames = ["wall_techControl.launch", "startMapping.launch"]
+packageNames = ["wall_detector", "wall_detector"]
+nodeLaunchNames = ["wall_techControl.launch", "mapping.launch"]
 hasPackageLidar = [1, 1]
 #-------------------
 roscore_process = None
 rosserial_process = None
 __all__ = ["GroveLedButton"]
 pub = rospy.Publisher('rostopic', std_msgs.msg.Float32, queue_size=10)
+pubArduinoInit = rospy.Publisher('/initArduino', std_msgs.msg.Empty, queue_size=10)
+
 
 #----------ROS---------------------
 def start_roscore():
@@ -48,10 +50,6 @@ def CallButton(data):
     robotPix_buttonsHandler.SetButtonState(data.x, data.y)
 
 def start_ros():
-    # setText("    Starting\n   Roscore...")
-    # print("\n Start Roscore")
-    # start_roscore()
-
     setText("    Starting\n  Rosserial...")
     print("\n Start Rosserial")
     start_rosserial()
@@ -63,16 +61,11 @@ def start_ros():
 
 
 def bool_isRosRunning():
-    #return (roscore_process.poll() is None) and (rosserial_process.poll() is None)
     return (rosserial_process.poll() is None)
 
 def stop_roscore():
     subprocess.run(["killall", "-9", "rosmaster"], check=True)
-    # global roscore_process
-    # if roscore_process is not None:
-    #     roscore_process.terminate()
-    #     roscore_process.wait() 
-    #     roscore_process = None
+
 
 def stop_rosserial():
     global rosserial_process
@@ -87,18 +80,24 @@ def StartRobot():
     print("\n Starting Package")
     setText("Starting Package..")
     
+    print("main loadedscript: ")
+    print(robotPix_globalVars.loadedScript)
     command = f"roslaunch {packageNames[robotPix_globalVars.loadedScript]} {nodeLaunchNames[robotPix_globalVars.loadedScript]}"
     subprocess.Popen(command, shell=True)
 
+    pubArduinoInit.publish(std_msgs.msg.Empty())
+
     setText("Robot Pix Power!")
-    print("\n Package Launched")
+    print("\n Package Launched: " + nodeLaunchNames[robotPix_globalVars.loadedScript])
 
 def StopRobot():
-    setText("ARRET D'URGENCE!")
+    setText("|ARRET DU ROBOT|")
 
     #subprocess.run(["rostopic", "pub", "-1", "/stopRos", "std_msgs/Float32", "0"])
     pub.publish(std_msgs.msg.Float32(0))
     print("\n /stopRos published")
+    robotPix_buttonsHandler.SetButtonState(0, 0)
+    robotPix_buttonsHandler.SetButtonState(1, 0)
     time.sleep(0.7)
 
     subprocess.run(["rosnode", "kill", "-a"])
@@ -123,9 +122,6 @@ def RestartRobotAferStop():
 
 def startRos():
     rospy.init_node('dashboard_sub')
-
-    
-
     rospy.spin()
 
 #----------MAIN--------------------

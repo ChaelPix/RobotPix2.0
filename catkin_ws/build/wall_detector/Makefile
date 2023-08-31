@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+wall_detector/CMakeFiles/wall_detector_mapping.dir/rule:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wall_detector/CMakeFiles/wall_detector_mapping.dir/rule
+.PHONY : wall_detector/CMakeFiles/wall_detector_mapping.dir/rule
+
+# Convenience name for target.
+wall_detector_mapping: wall_detector/CMakeFiles/wall_detector_mapping.dir/rule
+
+.PHONY : wall_detector_mapping
+
+# fast build rule for target.
+wall_detector_mapping/fast:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f wall_detector/CMakeFiles/wall_detector_mapping.dir/build.make wall_detector/CMakeFiles/wall_detector_mapping.dir/build
+.PHONY : wall_detector_mapping/fast
+
+# Convenience name for target.
 wall_detector/CMakeFiles/wall_detector_tech.dir/rule:
 	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wall_detector/CMakeFiles/wall_detector_tech.dir/rule
 .PHONY : wall_detector/CMakeFiles/wall_detector_tech.dir/rule
@@ -196,6 +211,33 @@ wall_detector_node: wall_detector/CMakeFiles/wall_detector_node.dir/rule
 wall_detector_node/fast:
 	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f wall_detector/CMakeFiles/wall_detector_node.dir/build.make wall_detector/CMakeFiles/wall_detector_node.dir/build
 .PHONY : wall_detector_node/fast
+
+src/mapping.o: src/mapping.cpp.o
+
+.PHONY : src/mapping.o
+
+# target to build an object file
+src/mapping.cpp.o:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f wall_detector/CMakeFiles/wall_detector_mapping.dir/build.make wall_detector/CMakeFiles/wall_detector_mapping.dir/src/mapping.cpp.o
+.PHONY : src/mapping.cpp.o
+
+src/mapping.i: src/mapping.cpp.i
+
+.PHONY : src/mapping.i
+
+# target to preprocess a source file
+src/mapping.cpp.i:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f wall_detector/CMakeFiles/wall_detector_mapping.dir/build.make wall_detector/CMakeFiles/wall_detector_mapping.dir/src/mapping.cpp.i
+.PHONY : src/mapping.cpp.i
+
+src/mapping.s: src/mapping.cpp.s
+
+.PHONY : src/mapping.s
+
+# target to generate assembly for a file
+src/mapping.cpp.s:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f wall_detector/CMakeFiles/wall_detector_mapping.dir/build.make wall_detector/CMakeFiles/wall_detector_mapping.dir/src/mapping.cpp.s
+.PHONY : src/mapping.cpp.s
 
 src/wall_detector.o: src/wall_detector.cpp.o
 
@@ -260,12 +302,16 @@ help:
 	@echo "... install/strip"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... wall_detector_mapping"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... wall_detector_tech"
 	@echo "... install/local"
 	@echo "... wall_detector_node"
+	@echo "... src/mapping.o"
+	@echo "... src/mapping.i"
+	@echo "... src/mapping.s"
 	@echo "... src/wall_detector.o"
 	@echo "... src/wall_detector.i"
 	@echo "... src/wall_detector.s"
