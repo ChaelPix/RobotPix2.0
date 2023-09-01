@@ -5,7 +5,7 @@
 #include <geometry_msgs/Vector3.h>
 
 //--Variables
-int turningSpeed = 50;
+int turningSpeed = 175;
 float distances[] = {0.25, 1, 0.5};
 int angles[] = {90, 0};
 int _actualStep = 0;
@@ -26,7 +26,7 @@ void SaveMapping()
     ledAction.y = 1;
     pubLed.publish(ledAction);
 
-    std::string command = "rosrun map_server map_saver -f ~/robotPix/catkin_ws/maps/";
+    std::string command = "rosrun map_server map_saver -f ~/robotPix/catkin_ws/maps/map";
     int result = system(command.c_str());
     if (result == 0)
     {
