@@ -6,8 +6,11 @@
 
 //--Variables
 int turningSpeed = 175;
-float distances[] = {0.25, 1, 0.5};
-int angles[] = {90, 0};
+// float distances[] = {0.25, 1, 0.5};
+// int angles[] = {90, 0};
+float distances[] = {0.25, 0};
+int angles[] = {0, 0};
+
 int _actualStep = 0;
 //----Pubs
 ros::Publisher pubStartWallDetection;

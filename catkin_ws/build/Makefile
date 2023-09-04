@@ -2066,173 +2066,30 @@ hector_mapping_generate_messages_py/fast:
 .PHONY : hector_mapping_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named dynamic_reconfigure_generate_messages_nodejs
+# Target rules for targets named itinerary_follower_node
 
 # Build rule for target.
-dynamic_reconfigure_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_nodejs
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
+itinerary_follower_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 itinerary_follower_node
+.PHONY : itinerary_follower_node
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	$(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
+itinerary_follower_node/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/itinerary_follower_node.dir/build.make itinerary_follower/CMakeFiles/itinerary_follower_node.dir/build
+.PHONY : itinerary_follower_node/fast
 
 #=============================================================================
-# Target rules for targets named costmap_2d_generate_messages_py
+# Target rules for targets named itinerary_follower_moveBaseConverter
 
 # Build rule for target.
-costmap_2d_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 costmap_2d_generate_messages_py
-.PHONY : costmap_2d_generate_messages_py
+itinerary_follower_moveBaseConverter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 itinerary_follower_moveBaseConverter
+.PHONY : itinerary_follower_moveBaseConverter
 
 # fast build rule for target.
-costmap_2d_generate_messages_py/fast:
-	$(MAKE) -f mapping/CMakeFiles/costmap_2d_generate_messages_py.dir/build.make mapping/CMakeFiles/costmap_2d_generate_messages_py.dir/build
-.PHONY : costmap_2d_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named dynamic_reconfigure_generate_messages_py
-
-# Build rule for target.
-dynamic_reconfigure_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_py
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	$(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named costmap_2d_generate_messages_nodejs
-
-# Build rule for target.
-costmap_2d_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 costmap_2d_generate_messages_nodejs
-.PHONY : costmap_2d_generate_messages_nodejs
-
-# fast build rule for target.
-costmap_2d_generate_messages_nodejs/fast:
-	$(MAKE) -f mapping/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/build.make mapping/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/build
-.PHONY : costmap_2d_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named costmap_2d_generate_messages_eus
-
-# Build rule for target.
-costmap_2d_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 costmap_2d_generate_messages_eus
-.PHONY : costmap_2d_generate_messages_eus
-
-# fast build rule for target.
-costmap_2d_generate_messages_eus/fast:
-	$(MAKE) -f mapping/CMakeFiles/costmap_2d_generate_messages_eus.dir/build.make mapping/CMakeFiles/costmap_2d_generate_messages_eus.dir/build
-.PHONY : costmap_2d_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named map_msgs_generate_messages_cpp
-
-# Build rule for target.
-map_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 map_msgs_generate_messages_cpp
-.PHONY : map_msgs_generate_messages_cpp
-
-# fast build rule for target.
-map_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f mapping/CMakeFiles/map_msgs_generate_messages_cpp.dir/build.make mapping/CMakeFiles/map_msgs_generate_messages_cpp.dir/build
-.PHONY : map_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named dynamic_reconfigure_generate_messages_eus
-
-# Build rule for target.
-dynamic_reconfigure_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_eus
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	$(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named dynamic_reconfigure_gencfg
-
-# Build rule for target.
-dynamic_reconfigure_gencfg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_gencfg
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	$(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-#=============================================================================
-# Target rules for targets named move_base_msgs_generate_messages_eus
-
-# Build rule for target.
-move_base_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_eus
-.PHONY : move_base_msgs_generate_messages_eus
-
-# fast build rule for target.
-move_base_msgs_generate_messages_eus/fast:
-	$(MAKE) -f mapping/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make mapping/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
-.PHONY : move_base_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named dynamic_reconfigure_generate_messages_lisp
-
-# Build rule for target.
-dynamic_reconfigure_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_lisp
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	$(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named move_base_msgs_generate_messages_lisp
-
-# Build rule for target.
-move_base_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_lisp
-.PHONY : move_base_msgs_generate_messages_lisp
-
-# fast build rule for target.
-move_base_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f mapping/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make mapping/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
-.PHONY : move_base_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named map_msgs_generate_messages_eus
-
-# Build rule for target.
-map_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 map_msgs_generate_messages_eus
-.PHONY : map_msgs_generate_messages_eus
-
-# fast build rule for target.
-map_msgs_generate_messages_eus/fast:
-	$(MAKE) -f mapping/CMakeFiles/map_msgs_generate_messages_eus.dir/build.make mapping/CMakeFiles/map_msgs_generate_messages_eus.dir/build
-.PHONY : map_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named map_msgs_generate_messages_lisp
-
-# Build rule for target.
-map_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 map_msgs_generate_messages_lisp
-.PHONY : map_msgs_generate_messages_lisp
-
-# fast build rule for target.
-map_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f mapping/CMakeFiles/map_msgs_generate_messages_lisp.dir/build.make mapping/CMakeFiles/map_msgs_generate_messages_lisp.dir/build
-.PHONY : map_msgs_generate_messages_lisp/fast
+itinerary_follower_moveBaseConverter/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/build.make itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/build
+.PHONY : itinerary_follower_moveBaseConverter/fast
 
 #=============================================================================
 # Target rules for targets named map_msgs_generate_messages_nodejs
@@ -2244,60 +2101,125 @@ map_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 map_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f mapping/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build.make mapping/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f itinerary_follower/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build.make itinerary_follower/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build
 .PHONY : map_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named costmap_2d_gencfg
+# Target rules for targets named map_msgs_generate_messages_eus
 
 # Build rule for target.
-costmap_2d_gencfg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 costmap_2d_gencfg
-.PHONY : costmap_2d_gencfg
+map_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_msgs_generate_messages_eus
+.PHONY : map_msgs_generate_messages_eus
 
 # fast build rule for target.
-costmap_2d_gencfg/fast:
-	$(MAKE) -f mapping/CMakeFiles/costmap_2d_gencfg.dir/build.make mapping/CMakeFiles/costmap_2d_gencfg.dir/build
-.PHONY : costmap_2d_gencfg/fast
+map_msgs_generate_messages_eus/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/map_msgs_generate_messages_eus.dir/build.make itinerary_follower/CMakeFiles/map_msgs_generate_messages_eus.dir/build
+.PHONY : map_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named map_msgs_generate_messages_py
+# Target rules for targets named dynamic_reconfigure_generate_messages_py
 
 # Build rule for target.
-map_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 map_msgs_generate_messages_py
-.PHONY : map_msgs_generate_messages_py
+dynamic_reconfigure_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_py
+.PHONY : dynamic_reconfigure_generate_messages_py
 
 # fast build rule for target.
-map_msgs_generate_messages_py/fast:
-	$(MAKE) -f mapping/CMakeFiles/map_msgs_generate_messages_py.dir/build.make mapping/CMakeFiles/map_msgs_generate_messages_py.dir/build
-.PHONY : map_msgs_generate_messages_py/fast
+dynamic_reconfigure_generate_messages_py/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named dynamic_reconfigure_generate_messages_cpp
+# Target rules for targets named dynamic_reconfigure_generate_messages_nodejs
 
 # Build rule for target.
-dynamic_reconfigure_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_cpp
-.PHONY : dynamic_reconfigure_generate_messages_cpp
+dynamic_reconfigure_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_nodejs
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	$(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+dynamic_reconfigure_generate_messages_nodejs/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named costmap_2d_generate_messages_lisp
+# Target rules for targets named nav2d_msgs_generate_messages_lisp
 
 # Build rule for target.
-costmap_2d_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 costmap_2d_generate_messages_lisp
-.PHONY : costmap_2d_generate_messages_lisp
+nav2d_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_msgs_generate_messages_lisp
+.PHONY : nav2d_msgs_generate_messages_lisp
 
 # fast build rule for target.
-costmap_2d_generate_messages_lisp/fast:
-	$(MAKE) -f mapping/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build.make mapping/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build
-.PHONY : costmap_2d_generate_messages_lisp/fast
+nav2d_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_msgs_generate_messages_lisp.dir/build.make itinerary_follower/CMakeFiles/nav2d_msgs_generate_messages_lisp.dir/build
+.PHONY : nav2d_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_msgs_generate_messages_cpp
+
+# Build rule for target.
+nav2d_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_msgs_generate_messages_cpp
+.PHONY : nav2d_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav2d_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_msgs_generate_messages_cpp.dir/build.make itinerary_follower/CMakeFiles/nav2d_msgs_generate_messages_cpp.dir/build
+.PHONY : nav2d_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_msgs_generate_messages_eus
+
+# Build rule for target.
+nav2d_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_msgs_generate_messages_eus
+.PHONY : nav2d_msgs_generate_messages_eus
+
+# fast build rule for target.
+nav2d_msgs_generate_messages_eus/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_msgs_generate_messages_eus.dir/build.make itinerary_follower/CMakeFiles/nav2d_msgs_generate_messages_eus.dir/build
+.PHONY : nav2d_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_operator_generate_messages_eus
+
+# Build rule for target.
+nav2d_operator_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_operator_generate_messages_eus
+.PHONY : nav2d_operator_generate_messages_eus
+
+# fast build rule for target.
+nav2d_operator_generate_messages_eus/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_operator_generate_messages_eus.dir/build.make itinerary_follower/CMakeFiles/nav2d_operator_generate_messages_eus.dir/build
+.PHONY : nav2d_operator_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_lisp
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_lisp
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_navigator_generate_messages_eus
+
+# Build rule for target.
+nav2d_navigator_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_navigator_generate_messages_eus
+.PHONY : nav2d_navigator_generate_messages_eus
+
+# fast build rule for target.
+nav2d_navigator_generate_messages_eus/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_navigator_generate_messages_eus.dir/build.make itinerary_follower/CMakeFiles/nav2d_navigator_generate_messages_eus.dir/build
+.PHONY : nav2d_navigator_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named costmap_2d_generate_messages_cpp
@@ -2309,21 +2231,21 @@ costmap_2d_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 costmap_2d_generate_messages_cpp/fast:
-	$(MAKE) -f mapping/CMakeFiles/costmap_2d_generate_messages_cpp.dir/build.make mapping/CMakeFiles/costmap_2d_generate_messages_cpp.dir/build
+	$(MAKE) -f itinerary_follower/CMakeFiles/costmap_2d_generate_messages_cpp.dir/build.make itinerary_follower/CMakeFiles/costmap_2d_generate_messages_cpp.dir/build
 .PHONY : costmap_2d_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named move_base_msgs_generate_messages_cpp
+# Target rules for targets named nav2d_msgs_generate_messages_py
 
 # Build rule for target.
-move_base_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_cpp
-.PHONY : move_base_msgs_generate_messages_cpp
+nav2d_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_msgs_generate_messages_py
+.PHONY : nav2d_msgs_generate_messages_py
 
 # fast build rule for target.
-move_base_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f mapping/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make mapping/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
-.PHONY : move_base_msgs_generate_messages_cpp/fast
+nav2d_msgs_generate_messages_py/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_msgs_generate_messages_py.dir/build.make itinerary_follower/CMakeFiles/nav2d_msgs_generate_messages_py.dir/build
+.PHONY : nav2d_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named move_base_msgs_generate_messages_nodejs
@@ -2335,8 +2257,112 @@ move_base_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f mapping/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make mapping/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f itinerary_follower/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make itinerary_follower/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
 .PHONY : move_base_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_navigator_generate_messages_py
+
+# Build rule for target.
+nav2d_navigator_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_navigator_generate_messages_py
+.PHONY : nav2d_navigator_generate_messages_py
+
+# fast build rule for target.
+nav2d_navigator_generate_messages_py/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_navigator_generate_messages_py.dir/build.make itinerary_follower/CMakeFiles/nav2d_navigator_generate_messages_py.dir/build
+.PHONY : nav2d_navigator_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named move_base_msgs_generate_messages_eus
+
+# Build rule for target.
+move_base_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_eus
+.PHONY : move_base_msgs_generate_messages_eus
+
+# fast build rule for target.
+move_base_msgs_generate_messages_eus/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make itinerary_follower/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
+.PHONY : move_base_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named move_base_msgs_generate_messages_lisp
+
+# Build rule for target.
+move_base_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_lisp
+.PHONY : move_base_msgs_generate_messages_lisp
+
+# fast build rule for target.
+move_base_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make itinerary_follower/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
+.PHONY : move_base_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_navigator_generate_messages_cpp
+
+# Build rule for target.
+nav2d_navigator_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_navigator_generate_messages_cpp
+.PHONY : nav2d_navigator_generate_messages_cpp
+
+# fast build rule for target.
+nav2d_navigator_generate_messages_cpp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_navigator_generate_messages_cpp.dir/build.make itinerary_follower/CMakeFiles/nav2d_navigator_generate_messages_cpp.dir/build
+.PHONY : nav2d_navigator_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named map_msgs_generate_messages_py
+
+# Build rule for target.
+map_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_msgs_generate_messages_py
+.PHONY : map_msgs_generate_messages_py
+
+# fast build rule for target.
+map_msgs_generate_messages_py/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/map_msgs_generate_messages_py.dir/build.make itinerary_follower/CMakeFiles/map_msgs_generate_messages_py.dir/build
+.PHONY : map_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named costmap_2d_gencfg
+
+# Build rule for target.
+costmap_2d_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 costmap_2d_gencfg
+.PHONY : costmap_2d_gencfg
+
+# fast build rule for target.
+costmap_2d_gencfg/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/costmap_2d_gencfg.dir/build.make itinerary_follower/CMakeFiles/costmap_2d_gencfg.dir/build
+.PHONY : costmap_2d_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named move_base_msgs_generate_messages_cpp
+
+# Build rule for target.
+move_base_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_base_msgs_generate_messages_cpp
+.PHONY : move_base_msgs_generate_messages_cpp
+
+# fast build rule for target.
+move_base_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make itinerary_follower/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
+.PHONY : move_base_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_navigator_generate_messages_lisp
+
+# Build rule for target.
+nav2d_navigator_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_navigator_generate_messages_lisp
+.PHONY : nav2d_navigator_generate_messages_lisp
+
+# fast build rule for target.
+nav2d_navigator_generate_messages_lisp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_navigator_generate_messages_lisp.dir/build.make itinerary_follower/CMakeFiles/nav2d_navigator_generate_messages_lisp.dir/build
+.PHONY : nav2d_navigator_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named move_base_msgs_generate_messages_py
@@ -2348,21 +2374,216 @@ move_base_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_py/fast:
-	$(MAKE) -f mapping/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make mapping/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
+	$(MAKE) -f itinerary_follower/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make itinerary_follower/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
 .PHONY : move_base_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named move_base_gencfg
+# Target rules for targets named nav2d_msgs_generate_messages_nodejs
 
 # Build rule for target.
-move_base_gencfg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_base_gencfg
-.PHONY : move_base_gencfg
+nav2d_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_msgs_generate_messages_nodejs
+.PHONY : nav2d_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-move_base_gencfg/fast:
-	$(MAKE) -f mapping/CMakeFiles/move_base_gencfg.dir/build.make mapping/CMakeFiles/move_base_gencfg.dir/build
-.PHONY : move_base_gencfg/fast
+nav2d_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_msgs_generate_messages_nodejs.dir/build.make itinerary_follower/CMakeFiles/nav2d_msgs_generate_messages_nodejs.dir/build
+.PHONY : nav2d_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_operator_generate_messages_lisp
+
+# Build rule for target.
+nav2d_operator_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_operator_generate_messages_lisp
+.PHONY : nav2d_operator_generate_messages_lisp
+
+# fast build rule for target.
+nav2d_operator_generate_messages_lisp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_operator_generate_messages_lisp.dir/build.make itinerary_follower/CMakeFiles/nav2d_operator_generate_messages_lisp.dir/build
+.PHONY : nav2d_operator_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_navigator_generate_messages_nodejs
+
+# Build rule for target.
+nav2d_navigator_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_navigator_generate_messages_nodejs
+.PHONY : nav2d_navigator_generate_messages_nodejs
+
+# fast build rule for target.
+nav2d_navigator_generate_messages_nodejs/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_navigator_generate_messages_nodejs.dir/build.make itinerary_follower/CMakeFiles/nav2d_navigator_generate_messages_nodejs.dir/build
+.PHONY : nav2d_navigator_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_operator_generate_messages_cpp
+
+# Build rule for target.
+nav2d_operator_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_operator_generate_messages_cpp
+.PHONY : nav2d_operator_generate_messages_cpp
+
+# fast build rule for target.
+nav2d_operator_generate_messages_cpp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_operator_generate_messages_cpp.dir/build.make itinerary_follower/CMakeFiles/nav2d_operator_generate_messages_cpp.dir/build
+.PHONY : nav2d_operator_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named costmap_2d_generate_messages_eus
+
+# Build rule for target.
+costmap_2d_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 costmap_2d_generate_messages_eus
+.PHONY : costmap_2d_generate_messages_eus
+
+# fast build rule for target.
+costmap_2d_generate_messages_eus/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/costmap_2d_generate_messages_eus.dir/build.make itinerary_follower/CMakeFiles/costmap_2d_generate_messages_eus.dir/build
+.PHONY : costmap_2d_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named costmap_2d_generate_messages_nodejs
+
+# Build rule for target.
+costmap_2d_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 costmap_2d_generate_messages_nodejs
+.PHONY : costmap_2d_generate_messages_nodejs
+
+# fast build rule for target.
+costmap_2d_generate_messages_nodejs/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/build.make itinerary_follower/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/build
+.PHONY : costmap_2d_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named map_msgs_generate_messages_cpp
+
+# Build rule for target.
+map_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_msgs_generate_messages_cpp
+.PHONY : map_msgs_generate_messages_cpp
+
+# fast build rule for target.
+map_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/map_msgs_generate_messages_cpp.dir/build.make itinerary_follower/CMakeFiles/map_msgs_generate_messages_cpp.dir/build
+.PHONY : map_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_operator_generate_messages_nodejs
+
+# Build rule for target.
+nav2d_operator_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_operator_generate_messages_nodejs
+.PHONY : nav2d_operator_generate_messages_nodejs
+
+# fast build rule for target.
+nav2d_operator_generate_messages_nodejs/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_operator_generate_messages_nodejs.dir/build.make itinerary_follower/CMakeFiles/nav2d_operator_generate_messages_nodejs.dir/build
+.PHONY : nav2d_operator_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named map_msgs_generate_messages_lisp
+
+# Build rule for target.
+map_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_msgs_generate_messages_lisp
+.PHONY : map_msgs_generate_messages_lisp
+
+# fast build rule for target.
+map_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/map_msgs_generate_messages_lisp.dir/build.make itinerary_follower/CMakeFiles/map_msgs_generate_messages_lisp.dir/build
+.PHONY : map_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named nav2d_operator_generate_messages_py
+
+# Build rule for target.
+nav2d_operator_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav2d_operator_generate_messages_py
+.PHONY : nav2d_operator_generate_messages_py
+
+# fast build rule for target.
+nav2d_operator_generate_messages_py/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/nav2d_operator_generate_messages_py.dir/build.make itinerary_follower/CMakeFiles/nav2d_operator_generate_messages_py.dir/build
+.PHONY : nav2d_operator_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named costmap_2d_generate_messages_lisp
+
+# Build rule for target.
+costmap_2d_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 costmap_2d_generate_messages_lisp
+.PHONY : costmap_2d_generate_messages_lisp
+
+# fast build rule for target.
+costmap_2d_generate_messages_lisp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build.make itinerary_follower/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build
+.PHONY : costmap_2d_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named costmap_2d_generate_messages_py
+
+# Build rule for target.
+costmap_2d_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 costmap_2d_generate_messages_py
+.PHONY : costmap_2d_generate_messages_py
+
+# fast build rule for target.
+costmap_2d_generate_messages_py/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/costmap_2d_generate_messages_py.dir/build.make itinerary_follower/CMakeFiles/costmap_2d_generate_messages_py.dir/build
+.PHONY : costmap_2d_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_cpp
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_cpp
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_gencfg
+
+# Build rule for target.
+dynamic_reconfigure_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_gencfg
+.PHONY : dynamic_reconfigure_gencfg
+
+# fast build rule for target.
+dynamic_reconfigure_gencfg/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make itinerary_follower/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+.PHONY : dynamic_reconfigure_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_eus
+
+# Build rule for target.
+dynamic_reconfigure_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_eus
+.PHONY : dynamic_reconfigure_generate_messages_eus
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_eus/fast:
+	$(MAKE) -f itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named map_monitor
+
+# Build rule for target.
+map_monitor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 map_monitor
+.PHONY : map_monitor
+
+# fast build rule for target.
+map_monitor/fast:
+	$(MAKE) -f mapping/CMakeFiles/map_monitor.dir/build.make mapping/CMakeFiles/map_monitor.dir/build
+.PHONY : map_monitor/fast
 
 #=============================================================================
 # Target rules for targets named mapping_node
@@ -2378,17 +2599,17 @@ mapping_node/fast:
 .PHONY : mapping_node/fast
 
 #=============================================================================
-# Target rules for targets named map_monitor
+# Target rules for targets named move_base_gencfg
 
 # Build rule for target.
-map_monitor: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 map_monitor
-.PHONY : map_monitor
+move_base_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_base_gencfg
+.PHONY : move_base_gencfg
 
 # fast build rule for target.
-map_monitor/fast:
-	$(MAKE) -f mapping/CMakeFiles/map_monitor.dir/build.make mapping/CMakeFiles/map_monitor.dir/build
-.PHONY : map_monitor/fast
+move_base_gencfg/fast:
+	$(MAKE) -f mapping/CMakeFiles/move_base_gencfg.dir/build.make mapping/CMakeFiles/move_base_gencfg.dir/build
+.PHONY : move_base_gencfg/fast
 
 #=============================================================================
 # Target rules for targets named wall_detector_mapping
@@ -2588,31 +2809,48 @@ help:
 	@echo "... hector_mapping_generate_messages"
 	@echo "... hector_mapping_gennodejs"
 	@echo "... hector_mapping_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... costmap_2d_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... costmap_2d_generate_messages_nodejs"
-	@echo "... costmap_2d_generate_messages_eus"
-	@echo "... map_msgs_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... move_base_msgs_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... move_base_msgs_generate_messages_lisp"
-	@echo "... map_msgs_generate_messages_eus"
-	@echo "... map_msgs_generate_messages_lisp"
+	@echo "... itinerary_follower_node"
+	@echo "... itinerary_follower_moveBaseConverter"
 	@echo "... map_msgs_generate_messages_nodejs"
-	@echo "... costmap_2d_gencfg"
-	@echo "... map_msgs_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... costmap_2d_generate_messages_lisp"
+	@echo "... map_msgs_generate_messages_eus"
+	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... nav2d_msgs_generate_messages_lisp"
+	@echo "... nav2d_msgs_generate_messages_cpp"
+	@echo "... nav2d_msgs_generate_messages_eus"
+	@echo "... nav2d_operator_generate_messages_eus"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... nav2d_navigator_generate_messages_eus"
 	@echo "... costmap_2d_generate_messages_cpp"
-	@echo "... move_base_msgs_generate_messages_cpp"
+	@echo "... nav2d_msgs_generate_messages_py"
 	@echo "... move_base_msgs_generate_messages_nodejs"
+	@echo "... nav2d_navigator_generate_messages_py"
+	@echo "... move_base_msgs_generate_messages_eus"
+	@echo "... move_base_msgs_generate_messages_lisp"
+	@echo "... nav2d_navigator_generate_messages_cpp"
+	@echo "... map_msgs_generate_messages_py"
+	@echo "... costmap_2d_gencfg"
+	@echo "... move_base_msgs_generate_messages_cpp"
+	@echo "... nav2d_navigator_generate_messages_lisp"
 	@echo "... move_base_msgs_generate_messages_py"
-	@echo "... move_base_gencfg"
-	@echo "... mapping_node"
+	@echo "... nav2d_msgs_generate_messages_nodejs"
+	@echo "... nav2d_operator_generate_messages_lisp"
+	@echo "... nav2d_navigator_generate_messages_nodejs"
+	@echo "... nav2d_operator_generate_messages_cpp"
+	@echo "... costmap_2d_generate_messages_eus"
+	@echo "... costmap_2d_generate_messages_nodejs"
+	@echo "... map_msgs_generate_messages_cpp"
+	@echo "... nav2d_operator_generate_messages_nodejs"
+	@echo "... map_msgs_generate_messages_lisp"
+	@echo "... nav2d_operator_generate_messages_py"
+	@echo "... costmap_2d_generate_messages_lisp"
+	@echo "... costmap_2d_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_gencfg"
+	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... map_monitor"
+	@echo "... mapping_node"
+	@echo "... move_base_gencfg"
 	@echo "... wall_detector_mapping"
 	@echo "... wall_detector_tech"
 	@echo "... wall_detector_node"

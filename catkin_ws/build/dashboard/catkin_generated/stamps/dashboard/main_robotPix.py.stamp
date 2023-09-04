@@ -22,8 +22,8 @@ leftButtonPin = 24 #button 0
 rightButtonPin = 26 #button 1
 
 #--Pckgs
-packageNames = ["wall_detector", "wall_detector"]
-nodeLaunchNames = ["wall_techControl.launch", "mapping.launch"]
+packageNames = ["wall_detector", "wall_detector", "itinerary_follower"]
+nodeLaunchNames = ["wall_techControl.launch", "mapping.launch", "follow_itineraries.launch"]
 hasPackageLidar = [1, 1]
 #-------------------
 roscore_process = None

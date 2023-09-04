@@ -693,6 +693,12 @@ image_geometry_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/vision_openc
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/noetic/share/image_transport/cmake
 
+//Value Computed by CMake
+itinerary_follower_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/itinerary_follower
+
+//Value Computed by CMake
+itinerary_follower_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/itinerary_follower
+
 //The directory containing a CMake configuration file for laser_geometry.
 laser_geometry_DIR:PATH=/opt/ros/noetic/share/laser_geometry/cmake
 
@@ -722,6 +728,15 @@ move_base_DIR:PATH=/opt/ros/noetic/share/move_base/cmake
 
 //The directory containing a CMake configuration file for move_base_msgs.
 move_base_msgs_DIR:PATH=/opt/ros/noetic/share/move_base_msgs/cmake
+
+//The directory containing a CMake configuration file for nav2d_msgs.
+nav2d_msgs_DIR:PATH=/opt/ros/noetic/share/nav2d_msgs/cmake
+
+//The directory containing a CMake configuration file for nav2d_navigator.
+nav2d_navigator_DIR:PATH=/opt/ros/noetic/share/nav2d_navigator/cmake
+
+//The directory containing a CMake configuration file for nav2d_operator.
+nav2d_operator_DIR:PATH=/opt/ros/noetic/share/nav2d_operator/cmake
 
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/noetic/share/nav_msgs/cmake
@@ -990,7 +1005,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=31
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=32
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

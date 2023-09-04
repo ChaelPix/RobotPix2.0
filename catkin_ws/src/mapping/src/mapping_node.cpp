@@ -14,7 +14,7 @@ public:
             // Avancer
             PublishToMotors(1);
         } else if (msg->linear.x < 0) {
-            // Rculer
+            // Reculer
             PublishToMotors(2);
         } else if (msg->angular.z > 0) {
             // Tourner à gauche

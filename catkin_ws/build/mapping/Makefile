@@ -92,27 +92,15 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -125,15 +113,27 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : list_install_components/fast
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,349 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-mapping/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : mapping/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+mapping/CMakeFiles/map_monitor.dir/rule:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/map_monitor.dir/rule
+.PHONY : mapping/CMakeFiles/map_monitor.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: mapping/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+map_monitor: mapping/CMakeFiles/map_monitor.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
+.PHONY : map_monitor
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/costmap_2d_generate_messages_py.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/costmap_2d_generate_messages_py.dir/rule
-.PHONY : mapping/CMakeFiles/costmap_2d_generate_messages_py.dir/rule
-
-# Convenience name for target.
-costmap_2d_generate_messages_py: mapping/CMakeFiles/costmap_2d_generate_messages_py.dir/rule
-
-.PHONY : costmap_2d_generate_messages_py
-
-# fast build rule for target.
-costmap_2d_generate_messages_py/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/costmap_2d_generate_messages_py.dir/build.make mapping/CMakeFiles/costmap_2d_generate_messages_py.dir/build
-.PHONY : costmap_2d_generate_messages_py/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : mapping/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: mapping/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule
-.PHONY : mapping/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-costmap_2d_generate_messages_nodejs: mapping/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule
-
-.PHONY : costmap_2d_generate_messages_nodejs
-
-# fast build rule for target.
-costmap_2d_generate_messages_nodejs/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/build.make mapping/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/build
-.PHONY : costmap_2d_generate_messages_nodejs/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule
-.PHONY : mapping/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-costmap_2d_generate_messages_eus: mapping/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule
-
-.PHONY : costmap_2d_generate_messages_eus
-
-# fast build rule for target.
-costmap_2d_generate_messages_eus/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/costmap_2d_generate_messages_eus.dir/build.make mapping/CMakeFiles/costmap_2d_generate_messages_eus.dir/build
-.PHONY : costmap_2d_generate_messages_eus/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
-.PHONY : mapping/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_cpp: mapping/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : map_msgs_generate_messages_cpp
-
-# fast build rule for target.
-map_msgs_generate_messages_cpp/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/map_msgs_generate_messages_cpp.dir/build.make mapping/CMakeFiles/map_msgs_generate_messages_cpp.dir/build
-.PHONY : map_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : mapping/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: mapping/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : mapping/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: mapping/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
-.PHONY : mapping/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_eus: mapping/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_eus
-
-# fast build rule for target.
-move_base_msgs_generate_messages_eus/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make mapping/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
-.PHONY : move_base_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : mapping/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: mapping/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-.PHONY : mapping/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_lisp: mapping/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_lisp
-
-# fast build rule for target.
-move_base_msgs_generate_messages_lisp/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make mapping/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
-.PHONY : move_base_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/map_msgs_generate_messages_eus.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
-.PHONY : mapping/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_eus: mapping/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
-
-.PHONY : map_msgs_generate_messages_eus
-
-# fast build rule for target.
-map_msgs_generate_messages_eus/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/map_msgs_generate_messages_eus.dir/build.make mapping/CMakeFiles/map_msgs_generate_messages_eus.dir/build
-.PHONY : map_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
-.PHONY : mapping/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_lisp: mapping/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : map_msgs_generate_messages_lisp
-
-# fast build rule for target.
-map_msgs_generate_messages_lisp/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/map_msgs_generate_messages_lisp.dir/build.make mapping/CMakeFiles/map_msgs_generate_messages_lisp.dir/build
-.PHONY : map_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
-.PHONY : mapping/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_nodejs: mapping/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : map_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-map_msgs_generate_messages_nodejs/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build.make mapping/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build
-.PHONY : map_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/costmap_2d_gencfg.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/costmap_2d_gencfg.dir/rule
-.PHONY : mapping/CMakeFiles/costmap_2d_gencfg.dir/rule
-
-# Convenience name for target.
-costmap_2d_gencfg: mapping/CMakeFiles/costmap_2d_gencfg.dir/rule
-
-.PHONY : costmap_2d_gencfg
-
-# fast build rule for target.
-costmap_2d_gencfg/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/costmap_2d_gencfg.dir/build.make mapping/CMakeFiles/costmap_2d_gencfg.dir/build
-.PHONY : costmap_2d_gencfg/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/map_msgs_generate_messages_py.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-.PHONY : mapping/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_py: mapping/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-
-.PHONY : map_msgs_generate_messages_py
-
-# fast build rule for target.
-map_msgs_generate_messages_py/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/map_msgs_generate_messages_py.dir/build.make mapping/CMakeFiles/map_msgs_generate_messages_py.dir/build
-.PHONY : map_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : mapping/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: mapping/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make mapping/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule
-.PHONY : mapping/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-costmap_2d_generate_messages_lisp: mapping/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule
-
-.PHONY : costmap_2d_generate_messages_lisp
-
-# fast build rule for target.
-costmap_2d_generate_messages_lisp/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build.make mapping/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build
-.PHONY : costmap_2d_generate_messages_lisp/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule
-.PHONY : mapping/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-costmap_2d_generate_messages_cpp: mapping/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule
-
-.PHONY : costmap_2d_generate_messages_cpp
-
-# fast build rule for target.
-costmap_2d_generate_messages_cpp/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/costmap_2d_generate_messages_cpp.dir/build.make mapping/CMakeFiles/costmap_2d_generate_messages_cpp.dir/build
-.PHONY : costmap_2d_generate_messages_cpp/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
-.PHONY : mapping/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_cpp: mapping/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_cpp
-
-# fast build rule for target.
-move_base_msgs_generate_messages_cpp/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make mapping/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
-.PHONY : move_base_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
-.PHONY : mapping/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_nodejs: mapping/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-move_base_msgs_generate_messages_nodejs/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make mapping/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
-.PHONY : move_base_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
-.PHONY : mapping/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_py: mapping/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_py
-
-# fast build rule for target.
-move_base_msgs_generate_messages_py/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make mapping/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
-.PHONY : move_base_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-mapping/CMakeFiles/move_base_gencfg.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/move_base_gencfg.dir/rule
-.PHONY : mapping/CMakeFiles/move_base_gencfg.dir/rule
-
-# Convenience name for target.
-move_base_gencfg: mapping/CMakeFiles/move_base_gencfg.dir/rule
-
-.PHONY : move_base_gencfg
-
-# fast build rule for target.
-move_base_gencfg/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/move_base_gencfg.dir/build.make mapping/CMakeFiles/move_base_gencfg.dir/build
-.PHONY : move_base_gencfg/fast
+map_monitor/fast:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/map_monitor.dir/build.make mapping/CMakeFiles/map_monitor.dir/build
+.PHONY : map_monitor/fast
 
 # Convenience name for target.
 mapping/CMakeFiles/mapping_node.dir/rule:
@@ -528,19 +198,19 @@ mapping_node/fast:
 .PHONY : mapping_node/fast
 
 # Convenience name for target.
-mapping/CMakeFiles/map_monitor.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/map_monitor.dir/rule
-.PHONY : mapping/CMakeFiles/map_monitor.dir/rule
+mapping/CMakeFiles/move_base_gencfg.dir/rule:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 mapping/CMakeFiles/move_base_gencfg.dir/rule
+.PHONY : mapping/CMakeFiles/move_base_gencfg.dir/rule
 
 # Convenience name for target.
-map_monitor: mapping/CMakeFiles/map_monitor.dir/rule
+move_base_gencfg: mapping/CMakeFiles/move_base_gencfg.dir/rule
 
-.PHONY : map_monitor
+.PHONY : move_base_gencfg
 
 # fast build rule for target.
-map_monitor/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/map_monitor.dir/build.make mapping/CMakeFiles/map_monitor.dir/build
-.PHONY : map_monitor/fast
+move_base_gencfg/fast:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f mapping/CMakeFiles/move_base_gencfg.dir/build.make mapping/CMakeFiles/move_base_gencfg.dir/build
+.PHONY : move_base_gencfg/fast
 
 src/map_monitor.o: src/map_monitor.cpp.o
 
@@ -605,35 +275,13 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... costmap_2d_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... costmap_2d_generate_messages_nodejs"
-	@echo "... costmap_2d_generate_messages_eus"
-	@echo "... map_msgs_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... move_base_msgs_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... move_base_msgs_generate_messages_lisp"
-	@echo "... test"
-	@echo "... map_msgs_generate_messages_eus"
-	@echo "... map_msgs_generate_messages_lisp"
-	@echo "... map_msgs_generate_messages_nodejs"
-	@echo "... costmap_2d_gencfg"
-	@echo "... map_msgs_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... costmap_2d_generate_messages_lisp"
-	@echo "... costmap_2d_generate_messages_cpp"
-	@echo "... move_base_msgs_generate_messages_cpp"
-	@echo "... move_base_msgs_generate_messages_nodejs"
-	@echo "... move_base_msgs_generate_messages_py"
-	@echo "... move_base_gencfg"
-	@echo "... mapping_node"
-	@echo "... map_monitor"
 	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... map_monitor"
+	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... mapping_node"
+	@echo "... move_base_gencfg"
 	@echo "... src/map_monitor.o"
 	@echo "... src/map_monitor.i"
 	@echo "... src/map_monitor.s"
