@@ -8,8 +8,9 @@
 int turningSpeed = 175;
 // float distances[] = {0.25, 1, 0.5};
 // int angles[] = {90, 0};
-float distances[] = {0.25, 0};
-int angles[] = {0, 0};
+float distances[] = {0.25, 1};
+int angles[] = {0, 1};
+const int nbSteps = 1;
 
 int _actualStep = 0;
 //----Pubs
@@ -72,7 +73,7 @@ void WallDetected(const std_msgs::Bool& msg)
     StopMotors();
     _actualStep++;
 
-    if(_actualStep < 3)
+    if(_actualStep < nbSteps)
     {
         std_msgs::String lcdTxt;
         lcdTxt.data = "MAP : Mur Devant";
