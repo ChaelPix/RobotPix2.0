@@ -6,10 +6,30 @@
 
 #IncludeRegexTransform: 
 
+/home/robot/robotPix/catkin_ws/src/itinerary_follower/include/AllPoints.h
+iostream
+-
+fstream
+-
+vector
+-
+string
+-
+filesystem
+-
+
 /home/robot/robotPix/catkin_ws/src/itinerary_follower/src/itinerary_controller.cpp
 ros/ros.h
 -
 geometry_msgs/PoseStamped.h
+-
+geometry_msgs/Vector3.h
+-
+std_msgs/Bool.h
+-
+../include/AllPoints.h
+/home/robot/robotPix/catkin_ws/src/itinerary_follower/include/AllPoints.h
+cmath
 -
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
@@ -69,6 +89,22 @@ geometry_msgs/Pose.h
 -
 
 /opt/ros/noetic/include/geometry_msgs/Quaternion.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/noetic/include/geometry_msgs/Vector3.h
 string
 -
 vector
@@ -733,6 +769,22 @@ ros/forwards.h
 /opt/ros/noetic/include/ros/ros/forwards.h
 
 /opt/ros/noetic/include/rosconsole/macros_generated.h
+
+/opt/ros/noetic/include/std_msgs/Bool.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
 
 /opt/ros/noetic/include/std_msgs/Header.h
 string

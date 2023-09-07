@@ -2573,45 +2573,6 @@ dynamic_reconfigure_generate_messages_eus/fast:
 .PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named map_monitor
-
-# Build rule for target.
-map_monitor: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 map_monitor
-.PHONY : map_monitor
-
-# fast build rule for target.
-map_monitor/fast:
-	$(MAKE) -f mapping/CMakeFiles/map_monitor.dir/build.make mapping/CMakeFiles/map_monitor.dir/build
-.PHONY : map_monitor/fast
-
-#=============================================================================
-# Target rules for targets named mapping_node
-
-# Build rule for target.
-mapping_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mapping_node
-.PHONY : mapping_node
-
-# fast build rule for target.
-mapping_node/fast:
-	$(MAKE) -f mapping/CMakeFiles/mapping_node.dir/build.make mapping/CMakeFiles/mapping_node.dir/build
-.PHONY : mapping_node/fast
-
-#=============================================================================
-# Target rules for targets named move_base_gencfg
-
-# Build rule for target.
-move_base_gencfg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 move_base_gencfg
-.PHONY : move_base_gencfg
-
-# fast build rule for target.
-move_base_gencfg/fast:
-	$(MAKE) -f mapping/CMakeFiles/move_base_gencfg.dir/build.make mapping/CMakeFiles/move_base_gencfg.dir/build
-.PHONY : move_base_gencfg/fast
-
-#=============================================================================
 # Target rules for targets named wall_detector_mapping
 
 # Build rule for target.
@@ -2848,9 +2809,6 @@ help:
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... map_monitor"
-	@echo "... mapping_node"
-	@echo "... move_base_gencfg"
 	@echo "... wall_detector_mapping"
 	@echo "... wall_detector_tech"
 	@echo "... wall_detector_node"

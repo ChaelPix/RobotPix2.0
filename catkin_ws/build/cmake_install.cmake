@@ -153,7 +153,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/robot/robotPix/catkin_ws/build/hector_slam/hector_trajectory_server/cmake_install.cmake")
   include("/home/robot/robotPix/catkin_ws/build/hector_slam/hector_mapping/cmake_install.cmake")
   include("/home/robot/robotPix/catkin_ws/build/itinerary_follower/cmake_install.cmake")
-  include("/home/robot/robotPix/catkin_ws/build/mapping/cmake_install.cmake")
   include("/home/robot/robotPix/catkin_ws/build/wall_detector/cmake_install.cmake")
 
 endif()

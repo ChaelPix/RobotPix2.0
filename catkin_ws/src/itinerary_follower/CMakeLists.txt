@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(itinerary_follower)
+set(CMAKE_CXX_STANDARD 17)
 
 find_package(catkin REQUIRED COMPONENTS
   move_base_msgs
