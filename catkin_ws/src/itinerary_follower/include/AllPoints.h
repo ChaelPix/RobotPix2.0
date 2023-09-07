@@ -49,6 +49,11 @@ public:
             return allPoints[itinerary][point];
     }
 
+    int getItinerarySize(int itineraryId)
+    {
+        return allPoints[itineraryId].size();
+    }
+
     void ShowAllPoints()
     {
         for (const auto &route : allPoints) 
