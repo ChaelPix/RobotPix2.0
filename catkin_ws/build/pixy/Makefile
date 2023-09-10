@@ -167,6 +167,48 @@ depend:
 	cd /home/robot/robotPix/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+pixy/CMakeFiles/pixy_node.dir/rule:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/CMakeFiles/pixy_node.dir/rule
+.PHONY : pixy/CMakeFiles/pixy_node.dir/rule
+
+# Convenience name for target.
+pixy_node: pixy/CMakeFiles/pixy_node.dir/rule
+
+.PHONY : pixy_node
+
+# fast build rule for target.
+pixy_node/fast:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_node.dir/build.make pixy/CMakeFiles/pixy_node.dir/build
+.PHONY : pixy_node/fast
+
+src/pixy_reader.o: src/pixy_reader.cpp.o
+
+.PHONY : src/pixy_reader.o
+
+# target to build an object file
+src/pixy_reader.cpp.o:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_node.dir/build.make pixy/CMakeFiles/pixy_node.dir/src/pixy_reader.cpp.o
+.PHONY : src/pixy_reader.cpp.o
+
+src/pixy_reader.i: src/pixy_reader.cpp.i
+
+.PHONY : src/pixy_reader.i
+
+# target to preprocess a source file
+src/pixy_reader.cpp.i:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_node.dir/build.make pixy/CMakeFiles/pixy_node.dir/src/pixy_reader.cpp.i
+.PHONY : src/pixy_reader.cpp.i
+
+src/pixy_reader.s: src/pixy_reader.cpp.s
+
+.PHONY : src/pixy_reader.s
+
+# target to generate assembly for a file
+src/pixy_reader.cpp.s:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_node.dir/build.make pixy/CMakeFiles/pixy_node.dir/src/pixy_reader.cpp.s
+.PHONY : src/pixy_reader.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -180,6 +222,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... pixy_node"
+	@echo "... src/pixy_reader.o"
+	@echo "... src/pixy_reader.i"
+	@echo "... src/pixy_reader.s"
 .PHONY : help
 
 

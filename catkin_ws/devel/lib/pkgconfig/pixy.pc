@@ -4,5 +4,5 @@ Name: pixy
 Description: Description of pixy
 Version: 0.0.0
 Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
+Libs: -L${prefix}/lib -lpixy
+Requires: cv_bridge image_transport roscpp sensor_msgs std_msgs

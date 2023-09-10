@@ -549,6 +549,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake"
+  "pixy/CMakeFiles/pixy_node.dir/DependInfo.cmake"
   "hector_slam/hector_imu_attitude_to_tf/CMakeFiles/imu_attitude_to_tf_node.dir/DependInfo.cmake"
   "hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_py.dir/DependInfo.cmake"
   "hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/DependInfo.cmake"

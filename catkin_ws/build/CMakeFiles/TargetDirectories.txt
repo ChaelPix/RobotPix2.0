@@ -187,6 +187,7 @@
 /home/robot/robotPix/catkin_ws/build/pixy/CMakeFiles/rebuild_cache.dir
 /home/robot/robotPix/catkin_ws/build/pixy/CMakeFiles/edit_cache.dir
 /home/robot/robotPix/catkin_ws/build/pixy/CMakeFiles/test.dir
+/home/robot/robotPix/catkin_ws/build/pixy/CMakeFiles/pixy_node.dir
 /home/robot/robotPix/catkin_ws/build/hector_slam/hector_imu_attitude_to_tf/CMakeFiles/install/strip.dir
 /home/robot/robotPix/catkin_ws/build/hector_slam/hector_imu_attitude_to_tf/CMakeFiles/install/local.dir
 /home/robot/robotPix/catkin_ws/build/hector_slam/hector_imu_attitude_to_tf/CMakeFiles/install.dir

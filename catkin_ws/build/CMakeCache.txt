@@ -408,6 +408,9 @@ UBUNTU:BOOL=TRUE
 //LSB Distrib - codename tag
 UBUNTU_FOCAL:BOOL=TRUE
 
+//The directory containing a CMake configuration file for ZBar.
+ZBar_DIR:PATH=ZBar_DIR-NOTFOUND
+
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/src/googletest/googlemock/include/gmock/gmock.h
 
