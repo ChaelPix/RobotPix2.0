@@ -1,8 +1,0 @@
-prefix=/home/robot/robotPix/catkin_ws/devel
-
-Name: pixy2_qr_reader
-Description: Description of pixy2_qr_reader
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

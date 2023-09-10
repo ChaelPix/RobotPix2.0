@@ -42,7 +42,7 @@ void ControlMotors(int action)
 void Move()
 {
     std_msgs::String lcdTxt;
-    lcdTxt.data = "-Trajectoire #" + actualItinerary + "\n-Point N:" + actualPoint;
+    lcdTxt.data = "-Trajectoire #" + std::to_string(actualItinerary) + "\n-Point N:" + std::to_string(actualPoint);
     pubLcd.publish(lcdTxt);
 
     double diffX = std::abs(destination.x) - std::abs(robot_x);
