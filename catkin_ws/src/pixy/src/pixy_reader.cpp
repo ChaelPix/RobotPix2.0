@@ -119,7 +119,6 @@ int ReadQrCode(const sensor_msgs::ImageConstPtr& msg)
         
         int num_symbols = std::distance(image.symbol_begin(), image.symbol_end());
 
-
         // Traiter chaque symbole détecté
         for(auto symbol = image.symbol_begin(); symbol != image.symbol_end(); ++symbol) {
             if(symbol->get_type() == zbar::ZBAR_QRCODE) {

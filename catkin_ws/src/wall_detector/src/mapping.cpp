@@ -3,14 +3,12 @@
 #include <std_msgs/Float32.h>
 #include <std_msgs/String.h>
 #include <geometry_msgs/Vector3.h>
+#include <vector>
 
 //--Variables
 int turningSpeed = 175;
-float distances[] = {0.25, 1, 0.5};
-int angles[] = {90, 0};
-// float distances[] = {0.25, 1};
-// int angles[] = {0, 1};
-const int nbSteps = 3;
+std::vector<float> distances = {0.25, 1, 0.5};
+std::vector<int> angles = {90, 0};
 
 int _actualStep = 0;
 //----Pubs
@@ -73,7 +71,7 @@ void WallDetected(const std_msgs::Bool& msg)
     StopMotors();
     _actualStep++;
 
-    if(_actualStep < nbSteps)
+    if(_actualStep < distances.size())
     {
         std_msgs::String lcdTxt;
         lcdTxt.data = "MAP : Mur Devant";
