@@ -1169,6 +1169,19 @@ sensor_msgs_generate_messages_cpp/fast:
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named pixy_qrcode_demo
+
+# Build rule for target.
+pixy_qrcode_demo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pixy_qrcode_demo
+.PHONY : pixy_qrcode_demo
+
+# fast build rule for target.
+pixy_qrcode_demo/fast:
+	$(MAKE) -f pixy/CMakeFiles/pixy_qrcode_demo.dir/build.make pixy/CMakeFiles/pixy_qrcode_demo.dir/build
+.PHONY : pixy_qrcode_demo/fast
+
+#=============================================================================
 # Target rules for targets named pixy_node
 
 # Build rule for target.
@@ -2246,6 +2259,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... pixy_qrcode_demo"
 	@echo "... pixy_node"
 	@echo "... imu_attitude_to_tf_node"
 	@echo "... tf2_msgs_generate_messages_py"

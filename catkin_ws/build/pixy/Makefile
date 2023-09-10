@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+pixy/CMakeFiles/pixy_qrcode_demo.dir/rule:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/CMakeFiles/pixy_qrcode_demo.dir/rule
+.PHONY : pixy/CMakeFiles/pixy_qrcode_demo.dir/rule
+
+# Convenience name for target.
+pixy_qrcode_demo: pixy/CMakeFiles/pixy_qrcode_demo.dir/rule
+
+.PHONY : pixy_qrcode_demo
+
+# fast build rule for target.
+pixy_qrcode_demo/fast:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_qrcode_demo.dir/build.make pixy/CMakeFiles/pixy_qrcode_demo.dir/build
+.PHONY : pixy_qrcode_demo/fast
+
+# Convenience name for target.
 pixy/CMakeFiles/pixy_node.dir/rule:
 	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/CMakeFiles/pixy_node.dir/rule
 .PHONY : pixy/CMakeFiles/pixy_node.dir/rule
@@ -181,6 +196,33 @@ pixy_node: pixy/CMakeFiles/pixy_node.dir/rule
 pixy_node/fast:
 	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_node.dir/build.make pixy/CMakeFiles/pixy_node.dir/build
 .PHONY : pixy_node/fast
+
+src/pixy_qrcode_demo.o: src/pixy_qrcode_demo.cpp.o
+
+.PHONY : src/pixy_qrcode_demo.o
+
+# target to build an object file
+src/pixy_qrcode_demo.cpp.o:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_qrcode_demo.dir/build.make pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.o
+.PHONY : src/pixy_qrcode_demo.cpp.o
+
+src/pixy_qrcode_demo.i: src/pixy_qrcode_demo.cpp.i
+
+.PHONY : src/pixy_qrcode_demo.i
+
+# target to preprocess a source file
+src/pixy_qrcode_demo.cpp.i:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_qrcode_demo.dir/build.make pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.i
+.PHONY : src/pixy_qrcode_demo.cpp.i
+
+src/pixy_qrcode_demo.s: src/pixy_qrcode_demo.cpp.s
+
+.PHONY : src/pixy_qrcode_demo.s
+
+# target to generate assembly for a file
+src/pixy_qrcode_demo.cpp.s:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_qrcode_demo.dir/build.make pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.s
+.PHONY : src/pixy_qrcode_demo.cpp.s
 
 src/pixy_reader.o: src/pixy_reader.cpp.o
 
@@ -220,9 +262,13 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... pixy_qrcode_demo"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... pixy_node"
+	@echo "... src/pixy_qrcode_demo.o"
+	@echo "... src/pixy_qrcode_demo.i"
+	@echo "... src/pixy_qrcode_demo.s"
 	@echo "... src/pixy_reader.o"
 	@echo "... src/pixy_reader.i"
 	@echo "... src/pixy_reader.s"

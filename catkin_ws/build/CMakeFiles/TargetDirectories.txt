@@ -185,6 +185,7 @@
 /home/robot/robotPix/catkin_ws/build/pixy/CMakeFiles/install.dir
 /home/robot/robotPix/catkin_ws/build/pixy/CMakeFiles/list_install_components.dir
 /home/robot/robotPix/catkin_ws/build/pixy/CMakeFiles/rebuild_cache.dir
+/home/robot/robotPix/catkin_ws/build/pixy/CMakeFiles/pixy_qrcode_demo.dir
 /home/robot/robotPix/catkin_ws/build/pixy/CMakeFiles/edit_cache.dir
 /home/robot/robotPix/catkin_ws/build/pixy/CMakeFiles/test.dir
 /home/robot/robotPix/catkin_ws/build/pixy/CMakeFiles/pixy_node.dir
