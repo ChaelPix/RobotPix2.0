@@ -1013,6 +1013,19 @@ visualization_msgs_generate_messages_cpp/fast:
 .PHONY : visualization_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named mouse_control_node
+
+# Build rule for target.
+mouse_control_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mouse_control_node
+.PHONY : mouse_control_node
+
+# fast build rule for target.
+mouse_control_node/fast:
+	$(MAKE) -f mouse_control/CMakeFiles/mouse_control_node.dir/build.make mouse_control/CMakeFiles/mouse_control_node.dir/build
+.PHONY : mouse_control_node/fast
+
+#=============================================================================
 # Target rules for targets named rplidar_control_node
 
 # Build rule for target.
@@ -2247,6 +2260,7 @@ help:
 	@echo "... visualization_msgs_generate_messages_eus"
 	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... visualization_msgs_generate_messages_cpp"
+	@echo "... mouse_control_node"
 	@echo "... rplidar_control_node"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"

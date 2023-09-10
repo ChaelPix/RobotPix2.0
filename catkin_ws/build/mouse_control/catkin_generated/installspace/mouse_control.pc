@@ -1,0 +1,8 @@
+prefix=/home/robot/robotPix/catkin_ws/install
+
+Name: mouse_control
+Description: Description of mouse_control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib -lmouse_control
+Requires: roscpp std_msgs

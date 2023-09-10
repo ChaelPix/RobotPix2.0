@@ -354,6 +354,9 @@ GTest_DIR:PATH=GTest_DIR-NOTFOUND
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=OFF
 
+//Path to a library.
+LIBEVDEV_LIBRARY:FILEPATH=/usr/lib/aarch64-linux-gnu/libevdev.so
+
 //lsb_release executable was found
 LSB_FOUND:BOOL=TRUE
 
@@ -658,6 +661,12 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
+//Value Computed by CMake
+mouse_control_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/mouse_control
+
+//Value Computed by CMake
+mouse_control_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/mouse_control
+
 //The directory containing a CMake configuration file for move_base_msgs.
 move_base_msgs_DIR:PATH=/opt/ros/noetic/share/move_base_msgs/cmake
 
@@ -907,7 +916,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=23
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=24
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

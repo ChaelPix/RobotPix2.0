@@ -63,6 +63,7 @@ all: dashboard/all
 all: hector_slam/hector_geotiff/all
 all: hector_slam/hector_geotiff_plugins/all
 all: hector_slam/hector_marker_drawing/all
+all: mouse_control/all
 all: rplidar_control/all
 all: hector_slam/hector_compressed_map_transport/all
 all: pixy/all
@@ -87,6 +88,7 @@ preinstall: dashboard/preinstall
 preinstall: hector_slam/hector_geotiff/preinstall
 preinstall: hector_slam/hector_geotiff_plugins/preinstall
 preinstall: hector_slam/hector_marker_drawing/preinstall
+preinstall: mouse_control/preinstall
 preinstall: rplidar_control/preinstall
 preinstall: hector_slam/hector_compressed_map_transport/preinstall
 preinstall: pixy/preinstall
@@ -116,6 +118,7 @@ clean: dashboard/clean
 clean: hector_slam/hector_geotiff/clean
 clean: hector_slam/hector_geotiff_plugins/clean
 clean: hector_slam/hector_marker_drawing/clean
+clean: mouse_control/clean
 clean: rplidar_control/clean
 clean: hector_slam/hector_compressed_map_transport/clean
 clean: pixy/clean
@@ -597,6 +600,24 @@ itinerary_follower/clean: itinerary_follower/CMakeFiles/dynamic_reconfigure_genc
 itinerary_follower/clean: itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/clean
 
 .PHONY : itinerary_follower/clean
+
+#=============================================================================
+# Directory level rules for directory mouse_control
+
+# Recursive "all" directory target.
+mouse_control/all: mouse_control/CMakeFiles/mouse_control_node.dir/all
+
+.PHONY : mouse_control/all
+
+# Recursive "preinstall" directory target.
+mouse_control/preinstall:
+
+.PHONY : mouse_control/preinstall
+
+# Recursive "clean" directory target.
+mouse_control/clean: mouse_control/CMakeFiles/mouse_control_node.dir/clean
+
+.PHONY : mouse_control/clean
 
 #=============================================================================
 # Directory level rules for directory pixy
@@ -2602,6 +2623,47 @@ hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_message
 .PHONY : hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
+# Target rules for target mouse_control/CMakeFiles/mouse_control_node.dir
+
+# All Build rule for target.
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_eus.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+mouse_control/CMakeFiles/mouse_control_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) -f mouse_control/CMakeFiles/mouse_control_node.dir/build.make mouse_control/CMakeFiles/mouse_control_node.dir/depend
+	$(MAKE) -f mouse_control/CMakeFiles/mouse_control_node.dir/build.make mouse_control/CMakeFiles/mouse_control_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=76,77 "Built target mouse_control_node"
+.PHONY : mouse_control/CMakeFiles/mouse_control_node.dir/all
+
+# Build rule for subdir invocation for target.
+mouse_control/CMakeFiles/mouse_control_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 mouse_control/CMakeFiles/mouse_control_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robot/robotPix/catkin_ws/build/CMakeFiles 0
+.PHONY : mouse_control/CMakeFiles/mouse_control_node.dir/rule
+
+# Convenience name for target.
+mouse_control_node: mouse_control/CMakeFiles/mouse_control_node.dir/rule
+
+.PHONY : mouse_control_node
+
+# clean rule for target.
+mouse_control/CMakeFiles/mouse_control_node.dir/clean:
+	$(MAKE) -f mouse_control/CMakeFiles/mouse_control_node.dir/build.make mouse_control/CMakeFiles/mouse_control_node.dir/clean
+.PHONY : mouse_control/CMakeFiles/mouse_control_node.dir/clean
+
+#=============================================================================
 # Target rules for target rplidar_control/CMakeFiles/rplidar_control_node.dir
 
 # All Build rule for target.
@@ -2627,7 +2689,7 @@ rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFi
 rplidar_control/CMakeFiles/rplidar_control_node.dir/all: rplidar_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
 	$(MAKE) -f rplidar_control/CMakeFiles/rplidar_control_node.dir/build.make rplidar_control/CMakeFiles/rplidar_control_node.dir/depend
 	$(MAKE) -f rplidar_control/CMakeFiles/rplidar_control_node.dir/build.make rplidar_control/CMakeFiles/rplidar_control_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=82,83 "Built target rplidar_control_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=84,85 "Built target rplidar_control_node"
 .PHONY : rplidar_control/CMakeFiles/rplidar_control_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2975,7 +3037,7 @@ pixy/CMakeFiles/pixy_qrcode_demo.dir/all: hector_slam/hector_compressed_map_tran
 pixy/CMakeFiles/pixy_qrcode_demo.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f pixy/CMakeFiles/pixy_qrcode_demo.dir/build.make pixy/CMakeFiles/pixy_qrcode_demo.dir/depend
 	$(MAKE) -f pixy/CMakeFiles/pixy_qrcode_demo.dir/build.make pixy/CMakeFiles/pixy_qrcode_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=78,79 "Built target pixy_qrcode_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=80,81 "Built target pixy_qrcode_demo"
 .PHONY : pixy/CMakeFiles/pixy_qrcode_demo.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3026,7 +3088,7 @@ pixy/CMakeFiles/pixy_node.dir/all: hector_slam/hector_compressed_map_transport/C
 pixy/CMakeFiles/pixy_node.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f pixy/CMakeFiles/pixy_node.dir/build.make pixy/CMakeFiles/pixy_node.dir/depend
 	$(MAKE) -f pixy/CMakeFiles/pixy_node.dir/build.make pixy/CMakeFiles/pixy_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=76,77 "Built target pixy_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=78,79 "Built target pixy_node"
 .PHONY : pixy/CMakeFiles/pixy_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3485,7 +3547,7 @@ hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_eus.
 hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/all:
 	$(MAKE) -f hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/build.make hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/depend
 	$(MAKE) -f hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/build.make hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=80,81 "Built target pose_and_orientation_to_imu_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=82,83 "Built target pose_and_orientation_to_imu_node"
 .PHONY : hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5245,7 +5307,7 @@ wall_detector/CMakeFiles/wall_detector_mapping.dir/all: hector_slam/hector_compr
 wall_detector/CMakeFiles/wall_detector_mapping.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_mapping.dir/build.make wall_detector/CMakeFiles/wall_detector_mapping.dir/depend
 	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_mapping.dir/build.make wall_detector/CMakeFiles/wall_detector_mapping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=84,85 "Built target wall_detector_mapping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=86,87 "Built target wall_detector_mapping"
 .PHONY : wall_detector/CMakeFiles/wall_detector_mapping.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5296,7 +5358,7 @@ wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_compress
 wall_detector/CMakeFiles/wall_detector_tech.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_tech.dir/build.make wall_detector/CMakeFiles/wall_detector_tech.dir/depend
 	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_tech.dir/build.make wall_detector/CMakeFiles/wall_detector_tech.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=88,89 "Built target wall_detector_tech"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=90,91 "Built target wall_detector_tech"
 .PHONY : wall_detector/CMakeFiles/wall_detector_tech.dir/all
 
 # Build rule for subdir invocation for target.
@@ -5347,7 +5409,7 @@ wall_detector/CMakeFiles/wall_detector_node.dir/all: hector_slam/hector_compress
 wall_detector/CMakeFiles/wall_detector_node.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_node.dir/build.make wall_detector/CMakeFiles/wall_detector_node.dir/depend
 	$(MAKE) -f wall_detector/CMakeFiles/wall_detector_node.dir/build.make wall_detector/CMakeFiles/wall_detector_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=86,87 "Built target wall_detector_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robot/robotPix/catkin_ws/build/CMakeFiles --progress-num=88,89 "Built target wall_detector_node"
 .PHONY : wall_detector/CMakeFiles/wall_detector_node.dir/all
 
 # Build rule for subdir invocation for target.

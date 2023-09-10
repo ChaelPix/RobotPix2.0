@@ -154,6 +154,14 @@
 /home/robot/robotPix/catkin_ws/build/hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_eus.dir
 /home/robot/robotPix/catkin_ws/build/hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir
 /home/robot/robotPix/catkin_ws/build/hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir
+/home/robot/robotPix/catkin_ws/build/mouse_control/CMakeFiles/install/strip.dir
+/home/robot/robotPix/catkin_ws/build/mouse_control/CMakeFiles/install/local.dir
+/home/robot/robotPix/catkin_ws/build/mouse_control/CMakeFiles/install.dir
+/home/robot/robotPix/catkin_ws/build/mouse_control/CMakeFiles/list_install_components.dir
+/home/robot/robotPix/catkin_ws/build/mouse_control/CMakeFiles/rebuild_cache.dir
+/home/robot/robotPix/catkin_ws/build/mouse_control/CMakeFiles/edit_cache.dir
+/home/robot/robotPix/catkin_ws/build/mouse_control/CMakeFiles/test.dir
+/home/robot/robotPix/catkin_ws/build/mouse_control/CMakeFiles/mouse_control_node.dir
 /home/robot/robotPix/catkin_ws/build/rplidar_control/CMakeFiles/install/strip.dir
 /home/robot/robotPix/catkin_ws/build/rplidar_control/CMakeFiles/edit_cache.dir
 /home/robot/robotPix/catkin_ws/build/rplidar_control/CMakeFiles/test.dir
