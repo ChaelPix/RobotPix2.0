@@ -2079,19 +2079,6 @@ itinerary_follower_node/fast:
 .PHONY : itinerary_follower_node/fast
 
 #=============================================================================
-# Target rules for targets named itinerary_follower_moveBaseConverter
-
-# Build rule for target.
-itinerary_follower_moveBaseConverter: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 itinerary_follower_moveBaseConverter
-.PHONY : itinerary_follower_moveBaseConverter
-
-# fast build rule for target.
-itinerary_follower_moveBaseConverter/fast:
-	$(MAKE) -f itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/build.make itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/build
-.PHONY : itinerary_follower_moveBaseConverter/fast
-
-#=============================================================================
 # Target rules for targets named map_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -2771,7 +2758,6 @@ help:
 	@echo "... hector_mapping_gennodejs"
 	@echo "... hector_mapping_generate_messages_py"
 	@echo "... itinerary_follower_node"
-	@echo "... itinerary_follower_moveBaseConverter"
 	@echo "... map_msgs_generate_messages_nodejs"
 	@echo "... map_msgs_generate_messages_eus"
 	@echo "... dynamic_reconfigure_generate_messages_py"

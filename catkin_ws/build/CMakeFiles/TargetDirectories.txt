@@ -352,7 +352,6 @@
 /home/robot/robotPix/catkin_ws/build/itinerary_follower/CMakeFiles/list_install_components.dir
 /home/robot/robotPix/catkin_ws/build/itinerary_follower/CMakeFiles/test.dir
 /home/robot/robotPix/catkin_ws/build/itinerary_follower/CMakeFiles/itinerary_follower_node.dir
-/home/robot/robotPix/catkin_ws/build/itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir
 /home/robot/robotPix/catkin_ws/build/itinerary_follower/CMakeFiles/map_msgs_generate_messages_nodejs.dir
 /home/robot/robotPix/catkin_ws/build/itinerary_follower/CMakeFiles/map_msgs_generate_messages_eus.dir
 /home/robot/robotPix/catkin_ws/build/itinerary_follower/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir

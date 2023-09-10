@@ -143,10 +143,9 @@
     <param name="tf_map_scanmatch_transform_frame_name" value="$(arg tf_map_scanmatch_transform_frame_name)" />
   </node>
 
-  <!-- Lancer votre nœud C++ pour le suivi de waypoints -->
     <node pkg="itinerary_follower" 
     type="itinerary_follower_node" 
     name="itineraryController" 
-    output="screen"/>
+    output="screen"/> 
 
 </launch>

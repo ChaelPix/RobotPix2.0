@@ -13,7 +13,7 @@
 
 class AllPoints{
 private:
-    std::string folderPath = "../waypoints";
+    std::string folderPath = "/home/robot/robotPix/catkin_ws/src/itinerary_follower/waypoints";
     std::vector<std::vector<Point>> allPoints;
 
     //Read points from a File
@@ -39,6 +39,7 @@ public:
         for (const auto &entry : std::filesystem::directory_iterator(folderPath)) 
         {
             if (entry.is_regular_file()) {
+                std::cout << entry.path().string() << std::endl;
                 std::vector<Point> points = readPointsFromFile(entry.path().string());
                 allPoints.push_back(points);
             }

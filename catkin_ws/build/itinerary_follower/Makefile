@@ -183,21 +183,6 @@ itinerary_follower_node/fast:
 .PHONY : itinerary_follower_node/fast
 
 # Convenience name for target.
-itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/rule:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/rule
-.PHONY : itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/rule
-
-# Convenience name for target.
-itinerary_follower_moveBaseConverter: itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/rule
-
-.PHONY : itinerary_follower_moveBaseConverter
-
-# fast build rule for target.
-itinerary_follower_moveBaseConverter/fast:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/build.make itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/build
-.PHONY : itinerary_follower_moveBaseConverter/fast
-
-# Convenience name for target.
 itinerary_follower/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 itinerary_follower/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
 .PHONY : itinerary_follower/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
@@ -779,33 +764,6 @@ src/itinerary_controller.cpp.s:
 	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f itinerary_follower/CMakeFiles/itinerary_follower_node.dir/build.make itinerary_follower/CMakeFiles/itinerary_follower_node.dir/src/itinerary_controller.cpp.s
 .PHONY : src/itinerary_controller.cpp.s
 
-src/moveBasetoArduino.o: src/moveBasetoArduino.cpp.o
-
-.PHONY : src/moveBasetoArduino.o
-
-# target to build an object file
-src/moveBasetoArduino.cpp.o:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/build.make itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/src/moveBasetoArduino.cpp.o
-.PHONY : src/moveBasetoArduino.cpp.o
-
-src/moveBasetoArduino.i: src/moveBasetoArduino.cpp.i
-
-.PHONY : src/moveBasetoArduino.i
-
-# target to preprocess a source file
-src/moveBasetoArduino.cpp.i:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/build.make itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/src/moveBasetoArduino.cpp.i
-.PHONY : src/moveBasetoArduino.cpp.i
-
-src/moveBasetoArduino.s: src/moveBasetoArduino.cpp.s
-
-.PHONY : src/moveBasetoArduino.s
-
-# target to generate assembly for a file
-src/moveBasetoArduino.cpp.s:
-	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/build.make itinerary_follower/CMakeFiles/itinerary_follower_moveBaseConverter.dir/src/moveBasetoArduino.cpp.s
-.PHONY : src/moveBasetoArduino.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -817,7 +775,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... test"
 	@echo "... itinerary_follower_node"
-	@echo "... itinerary_follower_moveBaseConverter"
 	@echo "... map_msgs_generate_messages_nodejs"
 	@echo "... map_msgs_generate_messages_eus"
 	@echo "... dynamic_reconfigure_generate_messages_py"
@@ -861,9 +818,6 @@ help:
 	@echo "... src/itinerary_controller.o"
 	@echo "... src/itinerary_controller.i"
 	@echo "... src/itinerary_controller.s"
-	@echo "... src/moveBasetoArduino.o"
-	@echo "... src/moveBasetoArduino.i"
-	@echo "... src/moveBasetoArduino.s"
 .PHONY : help
 
 

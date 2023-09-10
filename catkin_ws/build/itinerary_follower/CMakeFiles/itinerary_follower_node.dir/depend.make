@@ -66,6 +66,7 @@ itinerary_follower/CMakeFiles/itinerary_follower_node.dir/src/itinerary_controll
 itinerary_follower/CMakeFiles/itinerary_follower_node.dir/src/itinerary_controller.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
 itinerary_follower/CMakeFiles/itinerary_follower_node.dir/src/itinerary_controller.cpp.o: /opt/ros/noetic/include/std_msgs/Bool.h
 itinerary_follower/CMakeFiles/itinerary_follower_node.dir/src/itinerary_controller.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
+itinerary_follower/CMakeFiles/itinerary_follower_node.dir/src/itinerary_controller.cpp.o: /opt/ros/noetic/include/std_msgs/String.h
 itinerary_follower/CMakeFiles/itinerary_follower_node.dir/src/itinerary_controller.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 itinerary_follower/CMakeFiles/itinerary_follower_node.dir/src/itinerary_controller.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
 

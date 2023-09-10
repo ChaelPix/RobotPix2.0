@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC   -shared -Wl,-soname,libqr_code_reader.so -o /home/robot/robotPix/catkin_ws/devel/lib/libqr_code_reader.so CMakeFiles/qr_code_reader.dir/src/image_converter/qr_code_reader.cpp.o 

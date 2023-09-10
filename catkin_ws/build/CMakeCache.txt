@@ -446,12 +446,6 @@ actionlib_DIR:PATH=/opt/ros/noetic/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/noetic/share/actionlib_msgs/cmake
 
-//Value Computed by CMake
-beginner_camera_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/erle_pixy/ros/beginner_camera
-
-//Value Computed by CMake
-beginner_camera_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/erle_pixy/ros/beginner_camera
-
 //The directory containing a CMake configuration file for boost_atomic.
 boost_atomic_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/boost_atomic-1.71.0
 
@@ -500,9 +494,6 @@ dashboard_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/dashboard
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/noetic/share/dynamic_reconfigure/cmake
 
-//The directory containing a CMake configuration file for explore_lite.
-explore_lite_DIR:PATH=/opt/ros/noetic/share/explore_lite/cmake
-
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/noetic/share/gencpp/cmake
 
@@ -526,9 +517,6 @@ geometry_msgs_DIR:PATH=/opt/ros/noetic/share/geometry_msgs/cmake
 
 //Dependencies for the target
 geotiff_writer_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/aarch64-linux-gnu/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython3.8.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;general;Qt5::Widgets;general;stdc++fs;
-
-//The directory containing a CMake configuration file for gmapping.
-gmapping_DIR:PATH=/opt/ros/noetic/share/gmapping/cmake
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/gtest/googlemock
@@ -676,12 +664,6 @@ hector_trajectory_server_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/
 hector_trajectory_server_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/hector_slam/hector_trajectory_server
 
 //Value Computed by CMake
-image_converter_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/pixy_codebar_reader/image_converter
-
-//Value Computed by CMake
-image_converter_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/pixy_codebar_reader/image_converter
-
-//Value Computed by CMake
 image_geometry_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/vision_opencv/image_geometry
 
 //Dependencies for the target
@@ -708,12 +690,6 @@ lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
 //The directory containing a CMake configuration file for map_msgs.
 map_msgs_DIR:PATH=/opt/ros/noetic/share/map_msgs/cmake
 
-//Value Computed by CMake
-mapping_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/mapping
-
-//Value Computed by CMake
-mapping_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/mapping
-
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/noetic/share/message_filters/cmake
 
@@ -722,9 +698,6 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
-
-//The directory containing a CMake configuration file for move_base.
-move_base_DIR:PATH=/opt/ros/noetic/share/move_base/cmake
 
 //The directory containing a CMake configuration file for move_base_msgs.
 move_base_msgs_DIR:PATH=/opt/ros/noetic/share/move_base_msgs/cmake
@@ -752,18 +725,6 @@ pixy2_camera_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/pixy2_camera
 
 //Value Computed by CMake
 pixy2_camera_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/pixy2_camera
-
-//Value Computed by CMake
-pixy2_qr_reader_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/pixy2_qr_reader
-
-//Value Computed by CMake
-pixy2_qr_reader_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/pixy2_qr_reader
-
-//Value Computed by CMake
-pixy2_ros_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/pixy2_ros
-
-//Value Computed by CMake
-pixy2_ros_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/pixy2_ros
 
 //Path to a library.
 pkgcfg_lib_LIBUSB_usb-1.0:FILEPATH=/usr/lib/aarch64-linux-gnu/libusb-1.0.so
@@ -806,9 +767,6 @@ rplidar_control_BINARY_DIR:STATIC=/home/robot/robotPix/catkin_ws/build/rplidar_c
 
 //Value Computed by CMake
 rplidar_control_SOURCE_DIR:STATIC=/home/robot/robotPix/catkin_ws/src/rplidar_control
-
-//The directory containing a CMake configuration file for rplidar_ros.
-rplidar_ros_DIR:PATH=/opt/ros/noetic/share/rplidar_ros/cmake
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake

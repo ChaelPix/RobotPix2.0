@@ -3,6 +3,7 @@
 
 pixy2_camera/CMakeFiles/pixy2_node.dir/src/chirp.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy2_camera/src/chirp.cpp
 pixy2_camera/CMakeFiles/pixy2_node.dir/src/chirp.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy2_camera/src/chirp.hpp
+pixy2_camera/CMakeFiles/pixy2_node.dir/src/chirp.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy2_camera/src/debuglog.h
 pixy2_camera/CMakeFiles/pixy2_node.dir/src/chirp.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy2_camera/src/link.h
 
 pixy2_camera/CMakeFiles/pixy2_node.dir/src/libpixyusb2.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy2_camera/src/Pixy2CCC.h
@@ -235,6 +236,8 @@ pixy2_camera/CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.o: /usr/include/opencv
 pixy2_camera/CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.o: /usr/include/opencv4/opencv2/viz/vizcore.hpp
 pixy2_camera/CMakeFiles/pixy2_node.dir/src/pixy2_node.cpp.o: /usr/include/opencv4/opencv2/viz/widgets.hpp
 
+pixy2_camera/CMakeFiles/pixy2_node.dir/src/usblink.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy2_camera/src/debuglog.h
+pixy2_camera/CMakeFiles/pixy2_node.dir/src/usblink.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy2_camera/src/libusb.h
 pixy2_camera/CMakeFiles/pixy2_node.dir/src/usblink.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy2_camera/src/link.h
 pixy2_camera/CMakeFiles/pixy2_node.dir/src/usblink.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy2_camera/src/pixydefs.h
 pixy2_camera/CMakeFiles/pixy2_node.dir/src/usblink.cpp.o: /home/robot/robotPix/catkin_ws/src/pixy2_camera/src/usblink.cpp

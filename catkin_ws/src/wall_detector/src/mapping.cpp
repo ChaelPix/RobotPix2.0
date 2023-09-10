@@ -6,11 +6,11 @@
 
 //--Variables
 int turningSpeed = 175;
-// float distances[] = {0.25, 1, 0.5};
-// int angles[] = {90, 0};
-float distances[] = {0.25, 1};
-int angles[] = {0, 1};
-const int nbSteps = 1;
+float distances[] = {0.25, 1, 0.5};
+int angles[] = {90, 0};
+// float distances[] = {0.25, 1};
+// int angles[] = {0, 1};
+const int nbSteps = 3;
 
 int _actualStep = 0;
 //----Pubs
@@ -89,6 +89,8 @@ void WallDetected(const std_msgs::Bool& msg)
         pubMotors.publish(robot_msg);
     } else 
     {
+        ROS_INFO("End, wait 2sec"); 
+        ros::Duration(2.0).sleep();
         ROS_INFO("Saving Map!"); 
         SaveMapping();
     }
