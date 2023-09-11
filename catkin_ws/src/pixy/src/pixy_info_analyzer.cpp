@@ -4,45 +4,84 @@
 #include <std_msgs/String.h>
 #include <geometry_msgs/Vector3.h>
 
-ros::Publisher pubLcd;
-ros::Publisher pubMotors;
 
+/*-------------------*/
+const int stampSpeed = 100;
 std::vector<int> okColorsId = { 0 };
 std::vector<std::string> okCodes = { "Bonjour" };
+/*-------------------*/
+ros::Publisher pubLcd;
+ros::Publisher pubMotors;
+ros::Publisher pubPixyFinished;
 
-// void TamponOn()
-// {
-//     geometry_msgs::Vector3 robot_msg;
-//     robot_msg.x = robotSpeed;
-//     robot_msg.y = 5;
-//     pubMotors.publish(robot_msg);
-// }
+void SendLcd(std::string msg)
+{
+    std_msgs::String lcdMsg;
+    lcdMsg.data = msg;
+    pubLcd.publish(lcdMsg);
+}
 
-// void TamponOff()
-// {
-//     geometry_msgs::Vector3 robot_msg;
-//     robot_msg.x = robotSpeed;
-//     robot_msg.y = 0;
-//     pubMotors.publish(robot_msg);
-// }
+void StampOn()
+{
+    SendLcd("-  Tamponnage  -");
 
+    geometry_msgs::Vector3 robot_msg;
+    robot_msg.x = stampSpeed;
+    robot_msg.y = 6;
+    pubMotors.publish(robot_msg);
+}
+
+void PixyFinish()
+{
+    SendLcd("-Pixy a termine -");
+
+    std_msgs::Bool msg;
+    msg.data = true;
+    pubPixyFinished.publish(msg);
+}
+
+void StampedCallback(const std_msgs::Bool& msg)
+{
+    PixyFinish();
+}
 
 void ReceiveCode(const std_msgs::String& msg)
 {
-   // int colorId = (int)msg.data;
+    bool doStamp = false;
 
     for(int i = 0; i < okCodes.size(); i++)
     {
-        
+        if(msg.data == okCodes.at(i))
+        {
+            doStamp = true;
+            break;
+        }
     }
+
+    if(doStamp)
+        StampOn();
+    else
+        PixyFinish();
 }
 
 void ReceiveColor(const std_msgs::Float32& msg)
 {
-    for(int i = 0; i < okCodes.size(); i++)
+    bool doStamp = false;
+
+    int colorId = (int)msg.data;
+    for(int i = 0; i < okColorsId.size(); i++)
     {
-        
+        if(colorId == okColorsId.at(i))
+        {
+            doStamp = true;
+            break;
+        }
     }
+
+    if(doStamp)
+        StampOn();
+    else
+        PixyFinish();
 }
 
 
@@ -54,9 +93,11 @@ int main(int argc, char **argv)
     //Subs
     ros::Subscriber receiveCode = nh.subscribe("/pixy_stringCode", 10, ReceiveCode);
     ros::Subscriber receiveColor = nh.subscribe("/pixy_colorCode", 10, ReceiveColor);
+    ros::Subscriber stampCallback = nh.subscribe("/stampCallback", 10, StampedCallback);
 
     //Pubs
     pubLcd = nh.advertise<std_msgs::String>("/setLcdText", 10);
+    pubPixyFinished = nh.advertise<std_msgs::Bool>("/pixy_finished", 10);
 
     ros::Duration(2.0).sleep();
 
