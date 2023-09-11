@@ -183,6 +183,21 @@ pixy_qrcode_demo/fast:
 .PHONY : pixy_qrcode_demo/fast
 
 # Convenience name for target.
+pixy/CMakeFiles/pixy_analyzer.dir/rule:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/CMakeFiles/pixy_analyzer.dir/rule
+.PHONY : pixy/CMakeFiles/pixy_analyzer.dir/rule
+
+# Convenience name for target.
+pixy_analyzer: pixy/CMakeFiles/pixy_analyzer.dir/rule
+
+.PHONY : pixy_analyzer
+
+# fast build rule for target.
+pixy_analyzer/fast:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_analyzer.dir/build.make pixy/CMakeFiles/pixy_analyzer.dir/build
+.PHONY : pixy_analyzer/fast
+
+# Convenience name for target.
 pixy/CMakeFiles/pixy_node.dir/rule:
 	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pixy/CMakeFiles/pixy_node.dir/rule
 .PHONY : pixy/CMakeFiles/pixy_node.dir/rule
@@ -196,6 +211,33 @@ pixy_node: pixy/CMakeFiles/pixy_node.dir/rule
 pixy_node/fast:
 	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_node.dir/build.make pixy/CMakeFiles/pixy_node.dir/build
 .PHONY : pixy_node/fast
+
+src/pixy_info_analyzer.o: src/pixy_info_analyzer.cpp.o
+
+.PHONY : src/pixy_info_analyzer.o
+
+# target to build an object file
+src/pixy_info_analyzer.cpp.o:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_analyzer.dir/build.make pixy/CMakeFiles/pixy_analyzer.dir/src/pixy_info_analyzer.cpp.o
+.PHONY : src/pixy_info_analyzer.cpp.o
+
+src/pixy_info_analyzer.i: src/pixy_info_analyzer.cpp.i
+
+.PHONY : src/pixy_info_analyzer.i
+
+# target to preprocess a source file
+src/pixy_info_analyzer.cpp.i:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_analyzer.dir/build.make pixy/CMakeFiles/pixy_analyzer.dir/src/pixy_info_analyzer.cpp.i
+.PHONY : src/pixy_info_analyzer.cpp.i
+
+src/pixy_info_analyzer.s: src/pixy_info_analyzer.cpp.s
+
+.PHONY : src/pixy_info_analyzer.s
+
+# target to generate assembly for a file
+src/pixy_info_analyzer.cpp.s:
+	cd /home/robot/robotPix/catkin_ws/build && $(MAKE) -f pixy/CMakeFiles/pixy_analyzer.dir/build.make pixy/CMakeFiles/pixy_analyzer.dir/src/pixy_info_analyzer.cpp.s
+.PHONY : src/pixy_info_analyzer.cpp.s
 
 src/pixy_qrcode_demo.o: src/pixy_qrcode_demo.cpp.o
 
@@ -263,9 +305,13 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... pixy_qrcode_demo"
+	@echo "... pixy_analyzer"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... pixy_node"
+	@echo "... src/pixy_info_analyzer.o"
+	@echo "... src/pixy_info_analyzer.i"
+	@echo "... src/pixy_info_analyzer.s"
 	@echo "... src/pixy_qrcode_demo.o"
 	@echo "... src/pixy_qrcode_demo.i"
 	@echo "... src/pixy_qrcode_demo.s"

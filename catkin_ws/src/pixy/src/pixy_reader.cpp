@@ -4,6 +4,7 @@
 #include <sensor_msgs/Image.h>
 #include <std_msgs/String.h>
 #include <std_msgs/Bool.h>
+#include <std_msgs/Float32.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/opencv.hpp>
 #include <zbar.h>
@@ -20,6 +21,8 @@ enum class ImgType {Color, Bar, Qr};
 ImgType imgType = ImgType::Qr;
 /*--------------------------*/
 ros::Publisher pubLcd;
+ros::Publisher pubCode;
+ros::Publisher pubColor;
 zbar::ImageScanner scanner;
 int nbErrors = 0;
 bool isRunning = false;
@@ -196,6 +199,8 @@ int main(int argc, char **argv)
 
     //Pubs
     pubLcd = nh.advertise<std_msgs::String>("/setLcdText", 10);
+    pubCode = nh.advertise<std_msgs::String>("/pixy_stringCode", 10);
+    pubColor = nh.advertise<std_msgs::Float32>("/pixy_colorCode", 10);
 
     ros::Duration(2.0).sleep();
 

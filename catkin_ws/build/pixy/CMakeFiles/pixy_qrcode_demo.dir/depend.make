@@ -74,6 +74,7 @@ pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.o: /opt/ros/noetic
 pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.o: /opt/ros/noetic/include/sensor_msgs/Image.h
 pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.o: /opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h
 pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.o: /opt/ros/noetic/include/sensor_msgs/image_encodings.h
+pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.o: /opt/ros/noetic/include/std_msgs/Float32.h
 pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
 pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.o: /opt/ros/noetic/include/std_msgs/String.h
 pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h

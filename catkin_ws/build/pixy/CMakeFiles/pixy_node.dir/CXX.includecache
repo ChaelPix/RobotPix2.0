@@ -19,6 +19,8 @@ std_msgs/String.h
 -
 std_msgs/Bool.h
 -
+std_msgs/Float32.h
+-
 opencv2/highgui/highgui.hpp
 -
 opencv2/opencv.hpp
@@ -873,6 +875,22 @@ string
 -
 
 /opt/ros/noetic/include/std_msgs/Bool.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/noetic/include/std_msgs/Float32.h
 string
 -
 vector

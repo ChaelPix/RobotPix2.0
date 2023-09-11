@@ -11,6 +11,8 @@ void PublishToMotors(int action)
 {
     geometry_msgs::Vector3 robot_msg;
     robot_msg.x = robotSpeed;
+    if(action == 6 || action  == 7)
+        robot_msg.x = 50;
     robot_msg.y = action;
     pubMotors.publish(robot_msg);
 
@@ -41,11 +43,11 @@ int main(int argc, char **argv) {
             if (ev.type == EV_REL && ev.code == REL_WHEEL) {
                 if (ev.value > 0) {
                     msg.data = "Molette vers le haut";
-                    PublishToMotors(6);
+                    PublishToMotors(7);
                 }
                 else {
                     msg.data = "Molette vers le bas";
-                    PublishToMotors(7);
+                    PublishToMotors(6);          
                 }
             } else if (ev.type == EV_KEY && ev.code == BTN_LEFT && ev.value == 1) {
                 msg.data = "Clic gauche";

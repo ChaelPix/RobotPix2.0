@@ -75,6 +75,7 @@ pixy/CMakeFiles/pixy_node.dir/src/pixy_reader.cpp.o: /opt/ros/noetic/include/sen
 pixy/CMakeFiles/pixy_node.dir/src/pixy_reader.cpp.o: /opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h
 pixy/CMakeFiles/pixy_node.dir/src/pixy_reader.cpp.o: /opt/ros/noetic/include/sensor_msgs/image_encodings.h
 pixy/CMakeFiles/pixy_node.dir/src/pixy_reader.cpp.o: /opt/ros/noetic/include/std_msgs/Bool.h
+pixy/CMakeFiles/pixy_node.dir/src/pixy_reader.cpp.o: /opt/ros/noetic/include/std_msgs/Float32.h
 pixy/CMakeFiles/pixy_node.dir/src/pixy_reader.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
 pixy/CMakeFiles/pixy_node.dir/src/pixy_reader.cpp.o: /opt/ros/noetic/include/std_msgs/String.h
 pixy/CMakeFiles/pixy_node.dir/src/pixy_reader.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h

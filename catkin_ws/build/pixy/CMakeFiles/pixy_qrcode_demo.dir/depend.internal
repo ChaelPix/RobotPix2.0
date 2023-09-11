@@ -75,6 +75,7 @@ pixy/CMakeFiles/pixy_qrcode_demo.dir/src/pixy_qrcode_demo.cpp.o
  /opt/ros/noetic/include/sensor_msgs/Image.h
  /opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h
  /opt/ros/noetic/include/sensor_msgs/image_encodings.h
+ /opt/ros/noetic/include/std_msgs/Float32.h
  /opt/ros/noetic/include/std_msgs/Header.h
  /opt/ros/noetic/include/std_msgs/String.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h

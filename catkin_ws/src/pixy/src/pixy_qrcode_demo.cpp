@@ -3,6 +3,7 @@
 #include <cv_bridge/cv_bridge.h>
 #include <sensor_msgs/Image.h>
 #include <std_msgs/String.h>
+#include <std_msgs/Float32.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/opencv.hpp>
 #include <zbar.h>
@@ -12,7 +13,7 @@ zbar::ImageScanner scanner;
 
 void imageCallback(const sensor_msgs::ImageConstPtr& msg)
 {
-     ROS_INFO("msg received");
+    ROS_INFO("msg received");
     try
     {
         cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(msg, "bgr8");
@@ -51,6 +52,7 @@ int main(int argc, char **argv)
     ROS_INFO("START");
 
     scanner.set_config(zbar::ZBAR_NONE, zbar::ZBAR_CFG_ENABLE, 1);
+    //Pubs
     pubLcd = nh.advertise<std_msgs::String>("/setLcdText", 10);
 
     // Charger l'image avec OpenCV

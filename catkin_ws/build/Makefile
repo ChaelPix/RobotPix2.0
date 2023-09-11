@@ -1195,6 +1195,19 @@ pixy_qrcode_demo/fast:
 .PHONY : pixy_qrcode_demo/fast
 
 #=============================================================================
+# Target rules for targets named pixy_analyzer
+
+# Build rule for target.
+pixy_analyzer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pixy_analyzer
+.PHONY : pixy_analyzer
+
+# fast build rule for target.
+pixy_analyzer/fast:
+	$(MAKE) -f pixy/CMakeFiles/pixy_analyzer.dir/build.make pixy/CMakeFiles/pixy_analyzer.dir/build
+.PHONY : pixy_analyzer/fast
+
+#=============================================================================
 # Target rules for targets named pixy_node
 
 # Build rule for target.
@@ -2274,6 +2287,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... pixy_qrcode_demo"
+	@echo "... pixy_analyzer"
 	@echo "... pixy_node"
 	@echo "... imu_attitude_to_tf_node"
 	@echo "... tf2_msgs_generate_messages_py"
