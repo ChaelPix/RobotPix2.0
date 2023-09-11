@@ -98,6 +98,19 @@ void poseCallback(const geometry_msgs::PoseStamped::ConstPtr& msg)
         MoveFinished();
 }
 
+void PixyFinished(const std_msgs::Bool& msg)
+{
+    actualItinerary++;
+    if(actualItinerary >= allPoints.getTotalItineraries())
+    {
+        std_msgs::String lcdTxt;
+        lcdTxt.data = "------FIN!------";
+        pubLcd.publish(lcdTxt);
+    } else {
+        StartPoint();
+    }
+}
+
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "itineraryController");
@@ -105,7 +118,8 @@ int main(int argc, char **argv)
 
     ros::Subscriber pose_sub = nh.subscribe("/slam_out_pose", 1000, poseCallback);
     ros::Subscriber angle_sub = nh.subscribe("/RotateCallBack", 10, AngleReached);
-    
+    ros::Subscriber pixy_sub = nh.subscribe("/pixy_finished", 10, AngleReached);
+
     pubMotors = nh.advertise<geometry_msgs::Vector3>("/motorsControl", 10);
     pubWaypointsFinished = nh.advertise<std_msgs::Bool>("/waypoints_finished", 10);
     pubLcd = nh.advertise<std_msgs::String>("/setLcdText", 10);
