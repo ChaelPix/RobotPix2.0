@@ -1,0 +1,14 @@
+<launch>
+
+   <node pkg="pixy" 
+    type="pixy_node" 
+    name="pixy_node" 
+    output="screen"/>
+
+    <node pkg="pixy" 
+    type="pixy_analyzer" 
+    name="pixy_node_analyzer" 
+    output="screen"/>
+
+
+</launch>

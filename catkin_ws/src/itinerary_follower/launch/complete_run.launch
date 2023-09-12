@@ -62,4 +62,6 @@
     name="itineraryController" 
     output="screen"/> 
 
+    <include file="$(find pixy)/launch/pixy.launch"/>
+
 </launch>

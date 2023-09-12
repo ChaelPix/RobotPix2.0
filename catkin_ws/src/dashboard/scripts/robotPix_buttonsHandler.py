@@ -17,7 +17,7 @@ LeftButtonHeld = 1
 RightButtonClicked = 2
 RightButtonHeld = 3
 #------------------
-packagesDisplayNames = ["Detection Mur", "Creer la Map", "Suivre Points"]
+packagesDisplayNames = ["Detection Mur", "Creer la Map", "Mapping Souris", "Suivre Points", "Run Complete"]
 settingsDisplayNames = ["Choix du Package", "Desactiver Robot", "Eteindre Raspi"]
 #------------------
 rightBtn = None
