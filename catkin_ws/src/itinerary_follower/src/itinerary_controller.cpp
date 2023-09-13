@@ -16,12 +16,15 @@ ros::Publisher pubWaypointsFinished;
 ros::Publisher pubLcd;
 int motorsSpeed = 125;
 int turningSpeed = 175;
-enum class State {None, Turning, MovingX, MovingY};
+enum class State {None, Turning, MovingPosX, MovingPosY, MovingNegX, MovingNegY};
 State robotState = State::None;
 double tolerance = 0.05;
 
 double robot_x = 0;
 double robot_y = 0; 
+
+
+void Stamp();
 
 void TurnRobot(double angle)
 {
@@ -47,7 +50,12 @@ void Move()
 
     double diffX = std::abs(destination.x) - std::abs(robot_x);
     double diffY = std::abs(destination.y) - std::abs(robot_y);
-    robotState = diffX > diffY ? State::MovingX : State::MovingY;
+
+    if (std::abs(diffX) > std::abs(diffY)) {
+        robotState = diffX > 0 ? State::MovingPosX : State::MovingNegX;
+    } else {
+        robotState = diffY > 0 ? State::MovingPosY : State::MovingNegY;
+    }
 
     ControlMotors(1);
 }
@@ -60,6 +68,12 @@ void AngleReached(const std_msgs::Bool& msg)
 void StartPoint()
 {
     destination = allPoints.getPoint(actualItinerary, actualPoint);
+
+    if(destination.z == -999)
+    {
+        Stamp();
+        return;
+    } 
 
     if(actualItinerary == 0 && actualPoint == 0)
     {
@@ -87,15 +101,44 @@ void MoveFinished()
     StartPoint();
 }
 
+void Stamp() {
+    std_msgs::String lcdTxt;
+    lcdTxt.data = "-  Tamponnage  -";
+    pubLcd.publish(lcdTxt);
+
+    // Stamp On
+    ControlMotors(6);
+    ros::Duration(2.0).sleep();
+
+    // Stamp Off
+    ControlMotors(7);
+    ros::Duration(2.0).sleep();
+
+    // Stamp Stop
+    ControlMotors(8);
+    MoveFinished();
+}
+
 void poseCallback(const geometry_msgs::PoseStamped::ConstPtr& msg)
 {
     double robot_x = msg->pose.position.x;
     double robot_y = msg->pose.position.y;
     ROS_INFO("x: %f, y: %f", robot_x, robot_y);
 
-    if((robotState == State::MovingX && std::abs(robot_x - destination.x) <= tolerance)
-        || (robotState == State::MovingY && std::abs(robot_y - destination.y) <= tolerance)) 
-        MoveFinished();
+      switch (robotState) {
+        case State::MovingPosX:
+            if (robot_x >= destination.x - tolerance) MoveFinished();
+            break;
+        case State::MovingNegX:
+            if (robot_x <= destination.x + tolerance) MoveFinished();
+            break;
+        case State::MovingPosY:
+            if (robot_y >= destination.y - tolerance) MoveFinished();
+            break;
+        case State::MovingNegY:
+            if (robot_y <= destination.y + tolerance) MoveFinished();
+            break;
+    }
 }
 
 void PixyFinished(const std_msgs::Bool& msg)
@@ -118,7 +161,7 @@ int main(int argc, char **argv)
 
     ros::Subscriber pose_sub = nh.subscribe("/slam_out_pose", 1000, poseCallback);
     ros::Subscriber angle_sub = nh.subscribe("/RotateCallBack", 10, AngleReached);
-    ros::Subscriber pixy_sub = nh.subscribe("/pixy_finished", 10, AngleReached);
+    ros::Subscriber pixy_sub = nh.subscribe("/pixy_finished", 10, PixyFinished);
 
     pubMotors = nh.advertise<geometry_msgs::Vector3>("/motorsControl", 10);
     pubWaypointsFinished = nh.advertise<std_msgs::Bool>("/waypoints_finished", 10);

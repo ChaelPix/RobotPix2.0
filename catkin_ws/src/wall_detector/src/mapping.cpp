@@ -7,8 +7,10 @@
 
 //--Variables
 int turningSpeed = 175;
-std::vector<float> distances = {0.25, 1, 0.5};
-std::vector<int> angles = {90, 0};
+// std::vector<float> distances = {0.25, 0.8, 0.5};
+// std::vector<int> angles = {90, 0};
+std::vector<float> distances = {0.25, 0.3};
+std::vector<int> angles = {-90};
 
 int _actualStep = 0;
 //----Pubs
@@ -77,7 +79,7 @@ void WallDetected(const std_msgs::Bool& msg)
         lcdTxt.data = "MAP : Mur Devant";
         pubLcd.publish(lcdTxt);
 
-        ros::Duration(2.0).sleep();
+        ros::Duration(3.0).sleep();
 
         ROS_INFO("Rotating!"); 
         geometry_msgs::Vector3 robot_msg;

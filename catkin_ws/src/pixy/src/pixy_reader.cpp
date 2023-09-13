@@ -18,11 +18,13 @@
 
 /*--------------------------*/
 enum class ImgType {Color, Bar, Qr};
-ImgType imgType = ImgType::Qr;
+ImgType imgType = ImgType::Bar;
+
 /*--------------------------*/
 ros::Publisher pubLcd;
 ros::Publisher pubCode;
 ros::Publisher pubColor;
+ros::Publisher pubPixyFinished;
 zbar::ImageScanner scanner;
 int nbErrors = 0;
 bool isRunning = false;
@@ -56,10 +58,13 @@ std::vector<int> extractBlockNumbers(const std::string& filename) {
 
 int ReadColor()
 {
-    int result = system("/home/robot/robotPix/catkin_ws/src/pixy/executables/get_blocks");
+    int result = system("cd /home/robot/robotPix/catkin_ws/src/pixy/executables && ./get_blocks");
+
     if (result != 0) {
         ROS_WARN("Failed to execute the external executable.");
     }
+
+    ros::Duration(3.0).sleep();
 
     std::vector<int> blockNumbers = extractBlockNumbers("/home/robot/robotPix/catkin_ws/src/pixy/executables/output.txt");
     for (int num : blockNumbers) {
@@ -71,6 +76,7 @@ int ReadColor()
         std_msgs::String msg;
         msg.data = "Block #" + std::to_string(blockNumbers.at(0));
         pubLcd.publish(msg);
+        pubCode.publish(msg);
         return 1;
     } else {
         return -1;
@@ -86,7 +92,7 @@ int ReadBarCode(const sensor_msgs::ImageConstPtr& msg)
 
         cv::cvtColor(cv_image, cv_image, cv::COLOR_BGR2GRAY);
         zbar::Image image(cv_image.cols, cv_image.rows, "Y800", cv_image.data, cv_image.cols * cv_image.rows);
-        ROS_INFO("Converted to ZBar image");
+        ROS_INFO("Converted to ZBar image (Br)");
         scanner.scan(image);
 
         // Traiter chaque symbole détecté
@@ -96,10 +102,13 @@ int ReadBarCode(const sensor_msgs::ImageConstPtr& msg)
                 std_msgs::String msg;
                 msg.data = symbol->get_data();
                 pubLcd.publish(msg);
+                pubCode.publish(msg);
                 ROS_INFO("Bar code : %s", msg.data.c_str());
                 return 1;
             }
         }
+        ROS_INFO("no Br on Image");
+        return -1;
     }
     catch (cv_bridge::Exception& e)
     {
@@ -117,7 +126,7 @@ int ReadQrCode(const sensor_msgs::ImageConstPtr& msg)
 
         cv::cvtColor(cv_image, cv_image, cv::COLOR_BGR2GRAY);
         zbar::Image image(cv_image.cols, cv_image.rows, "Y800", cv_image.data, cv_image.cols * cv_image.rows);
-        ROS_INFO("Converted to ZBar image");
+        ROS_INFO("Converted to ZBar image (QR)");
         scanner.scan(image);
         
         int num_symbols = std::distance(image.symbol_begin(), image.symbol_end());
@@ -128,10 +137,13 @@ int ReadQrCode(const sensor_msgs::ImageConstPtr& msg)
                 std_msgs::String msg;
                 msg.data = symbol->get_data();
                 pubLcd.publish(msg); 
+                pubCode.publish(msg);
                 ROS_INFO("Qr code : %s", msg.data.c_str());
                 return 1;
             }
         }
+        ROS_INFO("no Qr on Image");
+        return -1;
     }
     catch (cv_bridge::Exception& e)
     {
@@ -142,12 +154,16 @@ int ReadQrCode(const sensor_msgs::ImageConstPtr& msg)
 
 int TakePicture()
 {
-    int result = system("/home/robot/robotPix/catkin_ws/src/pixy/executables/get_raw_frame");
+    int result = system("cd /home/robot/robotPix/catkin_ws/src/pixy/executables && ./get_raw_frame");
     if (result != 0) {
         ROS_WARN("Failed to execute the external executable.");
     }
 
-    ros::Duration(2.0).sleep();
+    ros::Duration(3.0).sleep();
+
+    std::ifstream file("/home/robot/robotPix/catkin_ws/src/pixy/executables/out.ppm");
+    if(!file.good())
+        return -1;
 
     cv::Mat image = cv::imread("/home/robot/robotPix/catkin_ws/src/pixy/executables/out.ppm", cv::IMREAD_COLOR); 
     cv_bridge::CvImage cv_image;
@@ -173,7 +189,12 @@ void Start(const std_msgs::Bool& msg)
     isRunning = true;
     int isSuccess = -1;
 
+
     while (isSuccess < 0 && nbErrors < 3) {
+        std_msgs::String msg;
+        msg.data = ">Asking Cam Pixy";
+        pubLcd.publish(msg); 
+
         if(imgType == ImgType::Color) 
             isSuccess = ReadColor();
         else 
@@ -181,6 +202,13 @@ void Start(const std_msgs::Bool& msg)
         
         if (isSuccess < 0) 
             nbErrors++;     
+    }
+
+    if(nbErrors >= 3)
+    {
+        std_msgs::String msg;
+        msg.data = "Pixy n'a rien detecté, skip";
+        pubLcd.publish(msg);
     }
 
     isRunning = false;
@@ -195,14 +223,21 @@ int main(int argc, char **argv)
     scanner.set_config(zbar::ZBAR_NONE, zbar::ZBAR_CFG_ENABLE, 1);
 
     //Subs
-    ros::Subscriber start_sub = nh.subscribe("/pixyTrigger", 10, Start);
+    ros::Subscriber start_sub = nh.subscribe("/waypoints_finished", 10, Start);
 
     //Pubs
     pubLcd = nh.advertise<std_msgs::String>("/setLcdText", 10);
     pubCode = nh.advertise<std_msgs::String>("/pixy_stringCode", 10);
     pubColor = nh.advertise<std_msgs::Float32>("/pixy_colorCode", 10);
 
+    pubPixyFinished = nh.advertise<std_msgs::Bool>("/pixy_finished", 10);
+
+
     ros::Duration(2.0).sleep();
+
+    std_msgs::Bool msg;
+    msg.data = true;
+    Start(msg);
 
     ros::spin();
     return 0;

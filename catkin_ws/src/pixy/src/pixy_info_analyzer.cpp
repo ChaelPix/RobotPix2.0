@@ -8,7 +8,7 @@
 /*-------------------*/
 const int stampSpeed = 100;
 std::vector<int> okColorsId = { 0 };
-std::vector<std::string> okCodes = { "Bonjour" };
+std::vector<std::string> okCodes = { "Yo" };
 /*-------------------*/
 ros::Publisher pubLcd;
 ros::Publisher pubMotors;
@@ -21,15 +21,14 @@ void SendLcd(std::string msg)
     pubLcd.publish(lcdMsg);
 }
 
-void StampOn()
-{
-    SendLcd("-  Tamponnage  -");
 
+void sendMotorMessage(double x, double y) {
     geometry_msgs::Vector3 robot_msg;
-    robot_msg.x = stampSpeed;
-    robot_msg.y = 6;
+    robot_msg.x = x;
+    robot_msg.y = y;
     pubMotors.publish(robot_msg);
 }
+
 
 void PixyFinish()
 {
@@ -40,9 +39,26 @@ void PixyFinish()
     pubPixyFinished.publish(msg);
 }
 
+void StampOn() {
+    SendLcd("-  Tamponnage  -");
+
+    // Stamp On
+    sendMotorMessage(stampSpeed, 6);
+    ros::Duration(2.0).sleep();
+
+    // Stamp Off
+    sendMotorMessage(stampSpeed, 7);
+    ros::Duration(2.0).sleep();
+
+    // Stamp Stop
+    sendMotorMessage(stampSpeed, 8);
+    PixyFinish();
+}
+
+
 void StampedCallback(const std_msgs::Bool& msg)
 {
-    PixyFinish();
+    //PixyFinish();
 }
 
 void ReceiveCode(const std_msgs::String& msg)
@@ -98,8 +114,10 @@ int main(int argc, char **argv)
     //Pubs
     pubLcd = nh.advertise<std_msgs::String>("/setLcdText", 10);
     pubPixyFinished = nh.advertise<std_msgs::Bool>("/pixy_finished", 10);
-
+    pubMotors = nh.advertise<geometry_msgs::Vector3>("/motorsControl", 10);
     ros::Duration(2.0).sleep();
+
+    
 
     ros::spin();
     return 0;
